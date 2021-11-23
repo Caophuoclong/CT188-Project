@@ -1,0 +1,114 @@
+@import url("./materialIcon.css");
+html,
+body {
+  min-height: 100%;
+
+  padding: 0;
+  background-color: #f2f2f2;
+  font-size: 62.5%;
+}
+body {
+  height: 100vh;
+  font-weight: 700;
+  margin: 0px;
+}
+
+a {
+  text-decoration: none;
+  color: #000;
+}
+a:visited {
+  color: #fff;
+}
+nav {
+  padding: 0.5rem;
+  background-color: #ffb213;
+  min-height: 1%;
+}
+nav > * {
+  margin: 0px;
+}
+nav ul {
+  margin: 0px;
+  display: flex;
+  justify-content: flex-end;
+}
+nav ul > li {
+  margin: 0;
+  padding: 0;
+  list-style: none;
+  margin: 0px 1rem;
+  font-size: 1.5rem;
+}
+footer {
+  background-color: #ffb213;
+  height: 4%;
+  padding: 0.5rem;
+}
+main {
+  width: 80%;
+  margin: 0.5rem auto;
+  min-height: 92%;
+  /* background-color: #20230140; */
+}
+header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+a {
+  display: flex;
+  align-items: center;
+}
+button {
+  cursor: pointer;
+}
+a span {
+  margin: 0 0.5rem;
+  padding: 0px;
+  font-size: 2rem;
+  color: #000;
+}
+#logo {
+  width: 9rem;
+  height: 8rem;
+  margin: 0.5rem;
+  border-radius: 45%;
+}
+.search {
+  display: flex;
+  position: relative;
+
+  min-width: 60%;
+  height: 3rem;
+
+  padding: 0.5rem;
+  margin: 0.5rem;
+
+  background-color: #ffffff;
+  border-radius: 15px;
+  box-shadow: #cccccc 0px 4px 6px 0px;
+}
+.search input {
+  width: 90%;
+  border: none;
+  outline: none;
+  color: #000;
+  background: transparent;
+  color: #333333;
+  font-size: 1.5rem;
+  padding: 5px 10px;
+  font-weight: bolder;
+}
+.icon-search {
+  position: absolute;
+  right: 0.5rem;
+  top: 0.5rem;
+  transform: translateY(-20%);
+  background: #304232;
+  outline: none;
+  border: none;
+  border-radius: 40%;
+  padding: 0.5rem;
+  box-shadow: #cccccc 0px 4px 6px 0px;
+}
