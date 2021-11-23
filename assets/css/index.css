@@ -11,6 +11,7 @@ body {
   height: 100vh;
   font-weight: 700;
   margin: 0px;
+  position: relative;
 }
 
 a {
@@ -20,10 +21,12 @@ a {
 a:visited {
   color: #fff;
 }
-nav {
+body > nav {
   padding: 0.5rem;
   background-color: #ffb213;
   min-height: 1%;
+  top: 0;
+  z-index: 1;
 }
 nav > * {
   margin: 0px;
@@ -111,4 +114,24 @@ a span {
   border-radius: 40%;
   padding: 0.5rem;
   box-shadow: #cccccc 0px 4px 6px 0px;
+}
+.scroll-to-top {
+  position: fixed;
+  bottom: 1rem;
+  right: 1rem;
+  background-color: #ffb213;
+  border-radius: 50%;
+  width: 3rem;
+  height: 3rem;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  box-shadow: #cccccc 0px 4px 6px 0px;
+}
+/* The sticky class is added to the header with JS when it reaches its scroll position */
+.sticky {
+  position: fixed;
+  top: 0;
+  width: 100%;
+  padding: 0.5rem;
 }
