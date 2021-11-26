@@ -54,7 +54,7 @@ main {
   min-height: 92%;
   /* background-color: #20230140; */
 }
-header {
+header div {
   display: flex;
   justify-content: space-between;
   align-items: center;
@@ -77,6 +77,10 @@ a span {
   height: 8rem;
   margin: 0.5rem;
   border-radius: 45%;
+}
+form {
+  display: flex;
+  justify-content: space-between;
 }
 .search {
   display: flex;
@@ -134,4 +138,7 @@ a span {
   top: 0;
   width: 100%;
   padding: 0.5rem;
+}
+ul li {
+  list-style: none;
 }
