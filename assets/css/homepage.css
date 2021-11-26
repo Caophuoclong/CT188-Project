@@ -19,10 +19,10 @@ main nav ul li {
 }
 .slide-container {
   width: 100%;
-  height: 30rem;
   border-radius: 1.5rem;
   margin: 2rem 0.5rem;
   margin-bottom: 5rem;
+  padding: 1rem 0;
 }
 .slide-item {
   width: 100%;
@@ -131,10 +131,10 @@ main nav ul li {
   margin: 0;
 }
 
-.slick-slide {
+.flash-sales .slick-slide {
   margin: 0 2rem;
 }
-.slick-list {
+.flash-sales .slick-list {
   margin: 0 4rem;
 }
 .flash-sales-items .title {
@@ -160,13 +160,12 @@ p {
 .product {
   width: 100%;
   border-radius: 1.5rem;
-  margin: 0.5rem;
+  margin: 1rem 0;
   display: flex;
   flex-wrap: wrap;
   justify-content: space-between;
   padding: 0.5rem;
   box-shadow: rgba(0, 0, 0, 0.16) 0px 1px 4px;
-  padding: 2rem;
 }
 .product .item img {
   width: 100%;

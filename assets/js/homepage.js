@@ -2,7 +2,7 @@ $(document).ready(function () {
 	$(".slide-container").slick({
 		infinite: true,
 		autoplay: true,
-		autoplaySpeed: 1000,
+		autoplaySpeed: 2000,
 		slideToShow: 3,
 		prevArrow: '<button class="slick-prev slick-arrow"><i class="material-icons" >arrow_back_ios</i></button>',
 		nextArrow: '<button class="slick-next slick-arrow"><i class="material-icons" >arrow_forward_ios</i></button>',
@@ -11,8 +11,8 @@ $(document).ready(function () {
 	});
 	$(".flash-sales").slick({
 		infinite: true,
-		// autoplay: true,
-		autoplaySpeed: 1000,
+		autoplay: true,
+		autoplaySpeed: 3000,
 		slidesToShow: 5,
 		slidesToScroll: 1,
 		prevArrow: '<button class="slick-prev slick-arrow"><i class="material-icons" >arrow_back_ios</i></button>',
