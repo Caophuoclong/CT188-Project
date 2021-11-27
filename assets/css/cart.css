@@ -116,8 +116,7 @@ textarea {
 .voucher {
   height: 15%;
 }
-.payment {
-}
+
 .voucher input {
   border: none;
   outline: none;
@@ -126,6 +125,16 @@ textarea {
   padding: 0.5rem 1rem;
   width: 80%;
   border: 0.5px solid #eee;
+}
+.voucher .btn-voucher {
+  width: 17%;
+  background-color: #ffb213;
+  padding: 0.5rem;
+  text-align: center;
+  border-radius: 8px;
+  display: none;
+  cursor: pointer;
+  color: #fff;
 }
 .sub-total,
 .tax,

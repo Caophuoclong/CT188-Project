@@ -64,7 +64,7 @@ $(document).ready(function () {
         </div>
 		`)
 	})
-	$("button").on("click", (event) => {
+	$(".product button").on("click", (event) => {
 		const id = event.target.id;
 		const buyNow = id.split("bn");
 		const addToCart = id.split("atc");

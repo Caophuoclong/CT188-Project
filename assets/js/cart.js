@@ -15,7 +15,7 @@ $(document).ready(function () {
         arrayItem.forEach((item, index) => {
             if (item) {
                 const html = `
-                <li class="product-items">
+                <li class="product-items" name="${item.id}">
                 <img
                 src="${item.image}"
                 alt=""
@@ -55,7 +55,14 @@ $(document).ready(function () {
         </div>`
         $(".product").append(html);
     }
-
+    $("input[name='voucher']").on("change", (event) => {
+        const btn = $(".btn-voucher")[0];
+        const value = event.target.value;
+        if (value)
+            $(btn).css("display", "inline-block");
+        else
+            $(btn).css("display", "none");
+    })
 
 
 
