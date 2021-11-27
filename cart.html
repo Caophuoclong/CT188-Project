@@ -15,6 +15,7 @@
       crossorigin="anonymous"
     />
     <link rel="stylesheet" href="./assets/css/index.css" />
+    <link rel="stylesheet" href="./assets/css/cart.css" />
     <title>Giỏ hàng</title>
   </head>
   <body>
@@ -40,12 +41,122 @@
           </button>
         </form>
         <div>
-          <a href="cart.html" class="">
+          <a href="cart.html" class="cart">
             <i class="material-icons" style="color: black">shopping_cart</i>
+            <span id="quantity" class="quantity">0</span>
             <span>Giỏ hàng</span>
           </a>
         </div>
       </header>
+      <div class="payment-box">
+        <form class="box1 d-flex flex-column justify-content-between">
+          <ol class="product"></ol>
+          <div class="voucher p-3">
+            <p class="h2">Voucher khyến mãi</p>
+            <input type="text" name="voucher" class="" />
+          </div>
+          <div class="payment">
+            <div class="sub-total">
+              <span>Thành tiền: </span>
+              <span id="sub-total">0</span>
+            </div>
+            <div class="tax">
+              <span>Thuế</span>
+              <span id="tax">0</span>
+            </div>
+            <div class="total">
+              <span>Tổng cộng</span>
+              <span id="total">0</span>
+            </div>
+          </div>
+        </form>
+        <form class="infoContact" action="#">
+          <div>
+            <p style="margin: 0 auto; width: 2rem">Order</p>
+          </div>
+          <label for="fullname">Họ và tên: </label>
+          <input
+            type="text"
+            id="fullname"
+            name="fullname"
+            placeholder="Họ và tên *"
+          />
+          <div class="contact">
+            <div class="mailandphone">
+              <label for="numberphone">Số điện thoại: </label>
+              <input
+                type="text"
+                placeholder="Số điện thoại *"
+                id="numberphone"
+                name="numberphone"
+              />
+            </div>
+            <div class="mailandphone">
+              <label for="email">Email</label>
+              <input type="text" placeholder="Email" id="email" name="email" />
+            </div>
+          </div>
+          <div>
+            <label class="title">Hình thức giao hàng</label>
+            <div class="delivery">
+              <div class="atHome">
+                <input
+                  type="radio"
+                  name="delivery"
+                  value="1"
+                  id="athome"
+                  checked
+                />
+                <label for="athome">Nhận hàng tại nhà</label>
+              </div>
+              <div class="atStore">
+                <input type="radio" name="delivery" value="1" id="atstore" />
+                <label for="atstore">Nhận hàng tại cửa hàng</label>
+              </div>
+            </div>
+          </div>
+          <div>
+            <label class="title">Địa chỉ</label>
+            <div class="address">
+              <div class="addressProvince">
+                <select name="" id="">
+                  <option value="ag">An giang</option>
+                </select>
+                <select name="" id="">
+                  <option value="ag">Thi xa tan chau</option>
+                </select>
+              </div>
+              <div>
+                <input
+                  type="text"
+                  name="addressDetail"
+                  id="addressDetail"
+                  placeholder="Địa chỉ giao hàng *"
+                />
+              </div>
+              <textarea
+                name=""
+                id=""
+                style="
+                  margin-top: 0px;
+                  margin-bottom: 0px;
+                  height: 78px;
+                  width: 100%;
+                "
+                placeholder="Ghi chú"
+              ></textarea>
+            </div>
+          </div>
+          <div class="d-flex align-items-center justify-content-center">
+            <input
+              type="submit"
+              value="Tiến hành đặt hàng"
+              class="btn btn-primary col-md-6"
+            />
+          </div>
+        </form>
+      </div>
+      <div class="suggestion"></div>
     </main>
     <footer></footer>
     <script
@@ -64,5 +175,6 @@
       crossorigin="anonymous"
     ></script>
     <script src="./assets/js/index.js"></script>
+    <script src="./assets/js/cart.js"></script>
   </body>
 </html>
