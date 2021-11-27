@@ -1,0 +1,32 @@
+.content1 {
+  display: flex;
+  justify-content: space-around;
+
+  font-size: 14px;
+  margin-top: 20px;
+  background-color: rgb(231, 229, 229);
+}
+.fb,
+.pint,
+.tw {
+  margin-right: 20px;
+}
+
+.content2 {
+  margin: 2rem;
+  display: flex;
+  justify-content: space-around;
+}
+.image {
+  margin: 10px;
+}
+.content3,
+.contact {
+  font-size: 14px;
+}
+.contact {
+  margin-top: 5rem;
+}
+.contact h1 {
+  text-align: center;
+}
