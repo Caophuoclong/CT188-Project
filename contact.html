@@ -21,8 +21,14 @@
       integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm"
       crossorigin="anonymous"
     />
+    <link
+      rel="shortcut icon"
+      type="image/vnd.microsoft.icon"
+      href="./assets/images/logo.jpg"
+    />
     <link rel="stylesheet" href="./assets/css/index.css" />
     <link rel="stylesheet" href="./assets/css/footer.css" />
+    <link rel="stylesheet" href="./assets/css/contact.css" />
     <title>Liên hệ</title>
   </head>
   <body>
@@ -55,9 +61,66 @@
         </div>
       </header>
       <div class="contact">
-        <h1>
-          Nếu bạn có góp ý, vui lòng sử dụg biểu mẫu bên dưới. Xin cảm ơn.
-        </h1>
+        <h1>LIÊN HỆ CHO CHÚNG TÔI</h1>
+        <form
+          action="#"
+          method="post"
+          id="signup-form"
+          enctype="application/x-www-form-urlencoded"
+          onsubmit="return lienhe(this);"
+        >
+          <ul>
+            <li>
+              <input
+                type="text"
+                name="hoten"
+                id="hoten"
+                minlength="4"
+                placeholder="Họ tên*"
+              />
+            </li>
+            <li>
+              <input
+                type="text"
+                name="email"
+                id="email"
+                onkeydown="validation()"
+                placeholder="Email*"
+              />
+            </li>
+            <li>
+              <input
+                type="text"
+                name="sdt"
+                id="sdt"
+                onkeydown="validation()"
+                placeholder="Số điện thoại*"
+              />
+            </li>
+            <li>
+              <input
+                type="text"
+                name="sdt"
+                id="sdt"
+                onkeydown="validation()"
+                placeholder="Chủ đề"
+              />
+            </li>
+            <li>
+              <textarea
+                name="content"
+                id="content"
+                cols="50"
+                rows="7"
+                minlength="10"
+                placeholder="Nội dung cần liên hệ*"
+              ></textarea>
+            </li>
+            <li>
+              <input type="submit" value="GỬI LIÊN HỆ" />
+            </li>
+          </ul>
+        </form>
       </div>
     </main>
     <footer>
@@ -76,12 +139,20 @@
           <a href="" class="text-dark">Chính sách đổi trả</a>
           <p class="">Hỗ trợ khách hàng: hotro@mobilestore.vn</p>
         </div>
-        <div>
+        <div class="connect">
           <h1>Kết nối với chúng tôi</h1>
-          <i class="fab fa-facebook text-info ml-5 fa-2x fb"></i>
-          <i class="fab fa-pinterest text-danger fa-2x pint"></i>
-          <i class="fab fa-twitter twitter text-info fa-2x tw"></i>
-          <i class="fab fa-google-plus-g text-danger fa-2x"></i>
+          <a href="" class="text-dark"
+            ><i class="fab fa-facebook text-info fa-2x fb"></i>Facebook</a
+          >
+          <a href="" class="text-dark"
+            ><i class="fab fa-pinterest text-danger fa-2x pint"></i>Pinterest</a
+          >
+          <a href="" class="text-dark"
+            ><i class="fab fa-twitter twitter text-info fa-2x tw"></i>Twitter</a
+          >
+          <a href="" class="text-dark"
+            ><i class="fab fa-google-plus-g text-danger fa-2x gg"></i>Google+</a
+          >
         </div>
       </div>
       <div class="content2">

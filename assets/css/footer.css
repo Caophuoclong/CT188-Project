@@ -2,31 +2,35 @@
   display: flex;
   justify-content: space-around;
 
-  font-size: 14px;
-  margin-top: 20px;
+  font-size: 1.5rem;
+  margin-top: 2rem;
   background-color: rgb(231, 229, 229);
 }
 .fb,
 .pint,
-.tw {
-  margin-right: 20px;
+.tw,
+.gg {
+  margin-right: 1.5rem;
 }
 
 .content2 {
   margin: 2rem;
   display: flex;
-  justify-content: space-around;
+  justify-content: space-between;
+  padding: 0 5rem;
 }
 .image {
-  margin: 10px;
+  margin: 1rem;
 }
 .content3,
 .contact {
-  font-size: 14px;
+  font-size: 1.5rem;
 }
 .contact {
   margin-top: 5rem;
 }
-.contact h1 {
-  text-align: center;
+.connect a {
+  text-decoration: none;
+  margin-left: 5rem;
+  margin-bottom: 1rem;
 }
