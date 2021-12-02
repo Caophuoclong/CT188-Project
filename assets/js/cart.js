@@ -64,8 +64,12 @@ $(document).ready(function () {
             $(btn).css("display", "none");
     })
 
-
-
+          $("#form").on("submit",(event)=>{
+            event.preventDefault();
+            alert("Order successfully!");
+            localStorage.removeItem("cartItem");
+            location.reload();
+          })
 
 
 })
