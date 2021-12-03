@@ -1,0 +1,217 @@
+.payment-box {
+  padding: 2rem;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.box1,
+.infoContact {
+  width: 45%;
+  overflow: auto;
+
+  margin: 0 1.5rem;
+  height: 65rem;
+}
+.infoContact {
+  display: block;
+
+  padding: 1rem;
+  font-size: 2rem;
+}
+.box1 {
+  padding: 1rem;
+  font-size: 1.5rem;
+}
+label {
+  display: block;
+  font-size: 1.5rem;
+  margin: 0.5rem;
+}
+
+.infoContact input {
+  width: 100%;
+  padding: 1rem;
+  font-size: 1.5rem;
+  border-radius: 12px;
+  outline: none;
+  border: none;
+  box-shadow: rgba(149, 157, 165, 0.2) 0px 8px 24px;
+  margin: 1rem 0rem;
+}
+.infoContact input:focus:not([type="radio"]) {
+  box-shadow: #ffb213 0px 0px 8px;
+}
+.infoContact .contact,
+.delivery {
+  display: flex;
+  justify-content: space-around;
+  gap: 0 2rem;
+}
+.infoContact .contact .mailandphone {
+  width: 50%;
+}
+.atHome,
+.atStore {
+  width: 50%;
+
+  padding: 0.5rem 1rem;
+  font-size: 1.5rem;
+  display: flex;
+  align-items: center;
+  gap: 0 2rem;
+  border-radius: 12px;
+  box-shadow: rgba(149, 157, 165, 0.2) 0px 8px 24px;
+  border: none;
+  outline: none;
+}
+select {
+  border-radius: 12px;
+  background-color: transparent;
+  border: none;
+  outline: none;
+  box-shadow: rgba(149, 157, 165, 0.2) 0px 8px 24px;
+}
+input {
+  background-color: transparent;
+}
+input[type="radio"] {
+  /* -webkit-appearance: none; */
+  /* -moz-appearance: none; */
+  /* appearance: none; */
+  width: 2rem;
+  height: 2rem;
+  border-radius: 100rem;
+}
+
+.addressProvince {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin: 1rem 0;
+}
+.addressProvince select {
+  width: 45%;
+  padding: 1rem;
+  font-size: 2rem;
+}
+.infoContact .btn-primary {
+  background-color: #ffb213;
+  font-size: 2rem;
+  font-weight: 700;
+}
+textarea {
+  width: 100%;
+  padding: 1rem;
+  font-size: 1.5rem;
+  border-radius: 12px;
+  outline: none;
+  border: none;
+  box-shadow: rgba(149, 157, 165, 0.2) 0px 8px 24px;
+  margin: 1rem 0rem;
+}
+
+.product {
+  height: 70%;
+}
+.voucher {
+  height: 15%;
+}
+
+.voucher input {
+  border: none;
+  outline: none;
+  box-shadow: rgba(149, 157, 165, 0.2) 0px 8px 24px;
+  border-radius: 12px;
+  padding: 0.5rem 1rem;
+  width: 80%;
+  border: 0.5px solid #eee;
+}
+.voucher .btn-voucher {
+  width: 17%;
+  background-color: #ffb213;
+  padding: 0.5rem;
+  text-align: center;
+  border-radius: 8px;
+  display: none;
+  cursor: pointer;
+  color: #fff;
+}
+.sub-total,
+.tax,
+.total {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 0.5rem 2rem;
+}
+.product {
+  padding: 1rem;
+  overflow: auto;
+}
+.product .product-items {
+  padding: 0.5rem 1rem;
+  display: flex;
+  justify-content: stretch;
+  box-shadow: rgba(99, 99, 99, 0.2) 0px 2px 8px 0px;
+  border-radius: 12px;
+  border: 0.7px solid #eee;
+  margin-bottom: 1rem;
+}
+
+.product .product-items img {
+  width: 20rem;
+  height: 10rem;
+  border-radius: 12px;
+}
+.product .product-items .info-product {
+  margin: 0 1rem;
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+}
+.sub-title {
+  font-size: 1rem;
+  font-weight: 700;
+}
+.product .product-items input[type="number"] {
+  font-size: 1rem;
+  width: 2rem;
+
+  text-align: center;
+  border: none;
+}
+.product .product-items input[type="number"]:hover {
+  cursor: default;
+}
+.value-button {
+  border: 1px solid #ddd;
+  width: 2rem;
+  background: #eee;
+  user-select: none;
+  font-size: 1rem;
+  outline: none;
+  display: inline-flex;
+  justify-content: center;
+  align-items: center;
+  border-radius: 5px;
+}
+.value-button:hover {
+  cursor: pointer;
+}
+.value-button:active,
+.value-button:focus {
+  outline: none;
+  box-shadow: rgba(100, 100, 111, 0.2) 0px 7px 29px 0px;
+  transition: 0.2s ease-in-out;
+}
+input[type="number"]::-webkit-inner-spin-button,
+input[type="number"]::-webkit-outer-spin-button {
+  -webkit-appearance: none;
+  margin: 0;
+}
+.price {
+  margin: 1rem 0;
+  font-size: 1.5rem;
+  font-weight: 700;
+  text-align: right;
+}
