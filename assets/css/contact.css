@@ -16,3 +16,18 @@ textarea {
   outline: 0;
   border: 0.2rem solid rgb(175, 174, 174);
 }
+.contact {
+  display: flex;
+  justify-content: space-around;
+}
+.container {
+  border: 0.2rem solid #ffb213;
+  border-radius: 2rem;
+  margin-right: 2rem;
+  /* width: 50%; */
+}
+.form-contact {
+  padding: 1rem;
+}
+#map {
+}
