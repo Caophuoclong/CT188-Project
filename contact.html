@@ -71,7 +71,7 @@
               method="post"
               id="signup-form"
               enctype="application/x-www-form-urlencoded"
-              onsubmit="return lienhe(this);"
+              onsubmit="return validate(this);"
             >
               <ul>
                 <li>
@@ -79,7 +79,6 @@
                     type="text"
                     name="hoten"
                     id="hoten"
-                    minlength="4"
                     placeholder="Họ tên*"
                   />
                 </li>
@@ -116,12 +115,11 @@
                     id="content"
                     cols="50"
                     rows="7"
-                    minlength="10"
                     placeholder="Nội dung cần liên hệ*"
                   ></textarea>
                 </li>
                 <li>
-                  <input type="submit" value="GỬI LIÊN HỆ" />
+                  <input type="submit" value="GỬI LIÊN HỆ" class="check" />
                 </li>
               </ul>
             </form>
@@ -244,5 +242,6 @@
       crossorigin="anonymous"
     ></script>
     <script src="./assets/js/index.js"></script>
+    <script src="./assets/js/contact.js"></script>
   </body>
 </html>
