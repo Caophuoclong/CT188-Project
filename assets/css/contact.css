@@ -24,10 +24,11 @@ textarea {
   border: 0.2rem solid #ffb213;
   border-radius: 2rem;
   margin-right: 2rem;
-  /* width: 50%; */
 }
 .form-contact {
   padding: 1rem;
 }
 #map {
+  /* width: 50rem;
+  height: 50rem; */
 }
