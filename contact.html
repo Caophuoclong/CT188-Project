@@ -64,14 +64,13 @@
       </header>
       <div class="contact">
         <div class="container">
-          <div class="form-contact">
+          <div class="form_ct">
             <h1>LIÊN HỆ CHO CHÚNG TÔI</h1>
             <form
               action="#"
-              method="post"
-              id="signup-form"
+              method="get"
+              id="form-contact"
               enctype="application/x-www-form-urlencoded"
-              onsubmit="return validate(this);"
             >
               <ul>
                 <li>
@@ -80,34 +79,32 @@
                     name="hoten"
                     id="hoten"
                     placeholder="Họ tên*"
+                    onchange="testName()"
                   />
+                  <p id="errorName"></p>
                 </li>
                 <li>
                   <input
                     type="text"
                     name="email"
                     id="email"
-                    onkeydown="validation()"
                     placeholder="Email*"
+                    onchange="testEmail()"
                   />
+                  <p id="errorEmail"></p>
                 </li>
                 <li>
                   <input
                     type="text"
                     name="sdt"
                     id="sdt"
-                    onkeydown="validation()"
                     placeholder="Số điện thoại*"
+                    onchange="testPhone()"
                   />
+                  <p id="errorPhone"></p>
                 </li>
                 <li>
-                  <input
-                    type="text"
-                    name="sdt"
-                    id="sdt"
-                    onkeydown="validation()"
-                    placeholder="Chủ đề"
-                  />
+                  <input type="text" name="sdt" id="sdt" placeholder="Chủ đề" />
                 </li>
                 <li>
                   <textarea
@@ -116,10 +113,12 @@
                     cols="50"
                     rows="7"
                     placeholder="Nội dung cần liên hệ*"
+                    onchange="testContent()"
                   ></textarea>
+                  <span id="errorContent"></span>
                 </li>
                 <li>
-                  <input type="submit" value="GỬI LIÊN HỆ" class="check" />
+                  <input type="submit" value="GỬI LIÊN HỆ" />
                 </li>
               </ul>
             </form>
