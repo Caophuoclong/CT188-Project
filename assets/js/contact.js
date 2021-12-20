@@ -1,20 +1,3 @@
-// $(document).ready(function () {
-//     $('body').on('click', '.check', function () {
-//         const vnf_regex = /((09|03|07|08|05)+([0-9]{8})\b)/g;
-//         const sdt = $('#sdt').val();
-//         if (sdt !== '') {
-//             if (vnf_regex.test(sdt) === false) {
-//                 alert('Số điện thoại không đúng định dạng');
-//                 return false;
-
-//             }
-//         } else {
-//             alert('Bạn chưa nhập số điện thoại');
-//             return false;
-//         }
-//     })
-// });
-
 function testName() {
     const value = event.target.value;
     if (value.length > 3) {
@@ -71,7 +54,8 @@ form_contact.addEventListener('submit', function (event) {
         && content.length > 10) {
         alert('Gửi liên hệ thành công!');
         // return true;
-        console.log('ok');
+        // console.log('ok');
+        location.reload();
     } else {
         alert('Gửi liên hệ thất bại!');
         event.preventDefault();

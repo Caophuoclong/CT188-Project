@@ -1,5 +1,5 @@
 #form-contact input[type="text"],
-textarea {
+.form-group textarea {
   border-radius: 0.5rem;
   padding: 1rem;
   margin-bottom: 1rem;
@@ -20,7 +20,7 @@ textarea {
   display: flex;
   justify-content: space-around;
 }
-.container {
+#myForm {
   border: 0.15rem solid #ffb213;
   border-radius: 2rem;
   margin-right: 2rem;
