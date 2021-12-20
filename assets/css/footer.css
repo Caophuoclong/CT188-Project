@@ -1,11 +1,10 @@
-html,
-body {
-  font-size: 100%;
-}
-.content3,
-.contact {
+.fs > a,
+p {
   font-size: 1.5rem;
 }
 .contact {
   margin-top: 5rem;
+}
+#connect a:hover {
+  color: rgb(155, 152, 152);
 }
