@@ -102,6 +102,12 @@ main nav ul li {
   box-shadow: rgba(0, 0, 0, 0.16) 0px 1px 4px;
   padding: 2rem;
 }
+.flash-sales-items {
+  box-shadow: rgba(0, 0, 0, 0.16) 0px 1px 8px;
+  border-radius: 1.5rem;
+  height: 35rem;
+  margin: 1rem 0;
+}
 .flash-sales-title {
   font-size: 3rem;
   font-weight: bold;
@@ -118,10 +124,11 @@ main nav ul li {
 }
 
 .flash-sales-items img {
-  height: 30rem;
-  width: 100%;
+  height: 70%;
+  width: 90%;
   gap: 0 2rem;
   border-radius: 8px;
+  border-radius: 2rem;
 }
 
 .flash-sales button {
@@ -138,7 +145,13 @@ main nav ul li {
   margin: 0 4rem;
 }
 .flash-sales-items .title {
-  font-size: 2rem;
+  font-size: 1rem;
+}
+.old-price {
+  font-size: 1.2rem;
+}
+.new-price {
+  font-size: 1.2rem;
 }
 .price {
   display: flex;
@@ -154,12 +167,8 @@ p {
 .product {
   width: 100%;
   border-radius: 1.5rem;
-  margin: 1rem 0;
-  display: flex;
-  flex-wrap: wrap;
-  justify-content: space-between;
-  padding: 0.5rem;
   box-shadow: rgba(0, 0, 0, 0.16) 0px 1px 4px;
+  margin: 0.5rem;
 }
 .product .item img {
   width: 100%;
@@ -167,12 +176,8 @@ p {
   border-radius: 2rem;
 }
 .product .item {
-  width: calc(20% - 4rem);
-  height: 50rem;
   border-radius: 2rem;
   box-shadow: rgba(0, 0, 0, 0.16) 0px 1px 8px;
-  padding: 1rem;
-  margin: 1rem 2rem;
   position: relative;
 }
 .name {
@@ -185,6 +190,7 @@ p {
   font-size: 1.5rem;
   font-weight: bold;
   color: #ffb213;
+  margin: 1rem 0;
 }
 
 .item:hover::before {
@@ -218,7 +224,7 @@ p {
   justify-content: center;
   align-items: center;
   margin: 0.5rem;
-  font-size: 1.5rem;
+  font-size: 1rem;
   position: relative;
   padding: 1rem;
   font-weight: 700;
@@ -241,14 +247,14 @@ p {
   display: block;
   position: absolute;
   color: white;
-  font-size: 3rem;
+  font-size: 2rem;
   top: 10;
   left: 0;
-  transform: translate(140%, -30%);
+  transform: translate(200%, -50%);
 }
 @media screen and (max-width: 1024px) {
   .sales-title {
-    font-size: 2rem;
+    font-size: 1.5rem;
   }
   .btn-item {
     font-size: 1.2rem;

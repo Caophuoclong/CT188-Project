@@ -50,7 +50,6 @@ main {
   margin: 0.5rem auto;
   min-height: 92%;
   padding: 2rem;
-  /* background-color: #20230140; */
 }
 header {
   display: flex;
@@ -152,15 +151,6 @@ ul li {
   top: 0;
   right: 10;
   transform: translateX(60%);
-}
-.old-price {
-  font-size: 1.5rem;
-  text-decoration: line-through;
-  color: rgb(165, 162, 162);
-}
-.new-price {
-  font-size: 1.5rem;
-  color: #ff1313;
 }
 .content1 {
   display: flex;

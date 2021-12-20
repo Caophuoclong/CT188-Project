@@ -1,9 +1,9 @@
 function refreshCartItem() {
     $(".product").html("");
     let subtotal = 0;
-    const arrayItem = JSON.parse(localStorage.getItem("cartItem"));
-    if (arrayItem) {
-        arrayItem.forEach((item, index) => {
+    const product = JSON.parse(localStorage.getItem("cartItem"));
+    if (product) {
+        product.forEach((item, index) => {
             if (item && item.quantity > 0) {
                 const html = `
                 <li class="product-items" name="${item.id}">
@@ -73,7 +73,6 @@ $(document).ready(function () {
         localStorage.removeItem("cartItem");
         location.reload();
     });
-
 
 
 
