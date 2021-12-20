@@ -2,7 +2,6 @@
 html,
 body {
   min-height: 100%;
-
   padding: 0;
   background-color: #fff;
   font-size: 62.5%;
@@ -36,25 +35,10 @@ select:focus {
   outline: none;
 }
 body > nav {
-  padding: 0.5rem;
   background-color: #ffb213;
-  min-height: 1%;
-  top: 0;
   z-index: 5;
 }
-nav > * {
-  margin: 0px;
-}
-nav ul {
-  margin: 0px;
-  display: flex;
-  justify-content: flex-end;
-}
 nav ul > li {
-  margin: 0;
-  padding: 0;
-  list-style: none;
-  margin: 0px 1rem;
   font-size: 1.5rem;
 }
 footer {

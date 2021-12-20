@@ -45,59 +45,34 @@ $(document).ready(function () {
 
 		console.log(newPrice.toLocaleString('it-IT', { style: 'currency', currency: 'VND' }))
 		$(".product").append(`
-		<div class="item">
+		<div class="item col-xl-2 col-lg-3 col-md-4 col-12">
           <img class="image" src="${item.image}" alt="" />
           <p class="name">${item.name}</p>
-          <div class="price">
+          <div class="price row">
             <p class="old-price">${oldPrice.toLocaleString("it-IT", { style: "currency", currency: "VND" })}</p>
             <p class="new-price">${newPrice.toLocaleString("it-IT", { style: "currency", currency: "VND" })}</p>
           </div>
           <div class="sales-title">Preduce 10% when buy more items</div>
 		  <div class="btn-container">
-		  <button class="btn-item btn-add-to-cart" id="atc${item.id}" onlick="()=>{
-			  console.log('click')
-		  }">
+		  <button class="btn-item btn-add-to-cart" id="atc${item.id}" onclick="addToCart(${item.id})">
 		 	<i class="material-icons" >shopping_cart</i> 
 		  Add to cart</button>
-		  <button class="btn-item btn-add-to-cart" id="bn${item.id}" onlick="byNow()">Buy now</button>
+		  <button class="btn-item btn-add-to-cart" id="bn${item.id}" onclick="buyNow(${item.id})">Buy now</button>
 		  </div>	
         </div>
 		`)
 	})
-	$(".product button").on("click", (event) => {
-		const id = event.target.id;
-		const buyNow = id.split("bn");
-		const addToCart = id.split("atc");
-		if (buyNow) {
 
-		}
-		const listCartItem = JSON.parse(localStorage.getItem("cartItem"));
-		if (addToCart) {
-			if (!listCartItem) {
-				const cartItem = [];
-				const item = arrayItem[addToCart[1] - 1];
-				item.quantity = 1;
-				cartItem.push(arrayItem[addToCart[1] - 1]);
-				localStorage.setItem("cartItem", JSON.stringify(cartItem));
-				refreshCartLength();
-			} else {
-				// check is item exists
-				console.log(listCartItem);
-				const itemExists = listCartItem.find(item => {
-					return item.id == addToCart[1];
-				});
-				console.log(itemExists);
-				if (itemExists) {
-					itemExists.quantity++;
-				} else {
-					const item = arrayItem[addToCart[1] - 1];
-					item.quantity = 1;
-					listCartItem.push(item);
-				}
-				// listCartItem.push(arrayItem[addToCart[1] - 1]);
-				localStorage.setItem("cartItem", JSON.stringify(listCartItem));
-				refreshCartLength();
-			}
-		}
-	})
+	// $(".product button").on("click", (event) => {
+	// 	const id = event.currentTarget.id;
+	// 	const buyNow = id.split("bn");
+	// 	const addToCart1 = id.split("atc");
+	// 	if (buyNow) {
+	// 		addToCart(buyNow);
+	// 		// location.href = "/cart.html"
+	// 	}
+	// 	if (addToCart1) {
+	// 		addToCart(addToCart1[1]);
+	// 	}
+	// })
 })

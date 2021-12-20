@@ -182,13 +182,9 @@ p {
 }
 
 .sales-title {
-  font-size: 2rem;
+  font-size: 1.5rem;
   font-weight: bold;
-  margin: 0.5rem;
-  display: flex;
-  align-items: center;
   color: #ffb213;
-  margin: 2rem 0;
 }
 
 .item:hover::before {
@@ -210,8 +206,12 @@ p {
 .btn-container {
   display: none;
   position: absolute;
+  width: 100%;
+
+  justify-content: center;
+
   top: 50%;
-  transform: translate(0, -50%);
+  transform: translateY(-50%);
 }
 .btn-item {
   display: flex;
@@ -227,6 +227,7 @@ p {
   outline: none;
   box-shadow: rgba(100, 100, 111, 0.2) 0px 7px 29px 0px;
 }
+
 .btn-item:active,
 .btn-item:focus {
   outline: none;
@@ -246,11 +247,8 @@ p {
   transform: translate(140%, -30%);
 }
 @media screen and (max-width: 1024px) {
-  .product .item {
-    width: calc(33.333333% - 4rem);
-  }
   .sales-title {
-    font-size: 1.2rem;
+    font-size: 2rem;
   }
   .btn-item {
     font-size: 1.2rem;

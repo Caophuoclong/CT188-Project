@@ -1,19 +1,10 @@
-$(document).ready(function () {
-    // Add event on radio checked
-    $('input[type="radio"]').on('change', function () {
-        const id = $(this).attr('id');
-        if (id === "atstore") {
-            $("#addressDetail").hide();
-        } else {
-            $("#addressDetail").show();
-        }
-        console.log(id);
-    })
+function refreshCartItem() {
+    $(".product").html("");
     let subtotal = 0;
     const arrayItem = JSON.parse(localStorage.getItem("cartItem"));
     if (arrayItem) {
         arrayItem.forEach((item, index) => {
-            if (item) {
+            if (item && item.quantity > 0) {
                 const html = `
                 <li class="product-items" name="${item.id}">
                 <img
@@ -24,21 +15,20 @@ $(document).ready(function () {
                 <span>${item.name}</span>
                 <span class="sub-title">Apple Iphone 11 Pro Max 256GB</span>
                 <div>
-                <div type="button" class="value-button">-</div>
+                <div type="button" class="value-button" onclick="des(${item.id})"> - </div>
                 <input
                     type="number"
                     id="number"
                     value="${item.quantity ? item.quantity : 1}"
                     readonly="readonly"
                 />
-                <div type="button" class="value-button">+</div>
+                <div type="button" class="value-button" onclick="inc(${item.id})">+</div>
                 </div>
                 <p class="price">${Number(item.newPrice).toLocaleString("it-IT", { style: "currency", currency: "VND" })}</p>
             </div></li>
                 `;
                 $(".product").append(html);
                 subtotal += item.newPrice * item.quantity;
-
             }
         })
         let tax = Number(subtotal) * 0.1;
@@ -55,6 +45,19 @@ $(document).ready(function () {
         </div>`
         $(".product").append(html);
     }
+}
+$(document).ready(function () {
+    // Add event on radio checked
+    $('input[type="radio"]').on('change', function () {
+        const id = $(this).attr('id');
+        if (id === "atstore") {
+            $("#addressDetail").hide();
+        } else {
+            $("#addressDetail").show();
+        }
+        console.log(id);
+    })
+    refreshCartItem();
     $("input[name='voucher']").on("change", (event) => {
         const btn = $(".btn-voucher")[0];
         const value = event.target.value;
@@ -64,12 +67,14 @@ $(document).ready(function () {
             $(btn).css("display", "none");
     })
 
-          $("#form").on("submit",(event)=>{
-            event.preventDefault();
-            alert("Order successfully!");
-            localStorage.removeItem("cartItem");
-            location.reload();
-          })
+    $("#form").on("submit", (event) => {
+        event.preventDefault();
+        alert("Order successfully!");
+        localStorage.removeItem("cartItem");
+        location.reload();
+    });
+
+
 
 
 })
