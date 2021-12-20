@@ -1,26 +1,6 @@
-.content1 {
-  display: flex;
-  justify-content: space-around;
-
-  font-size: 1.5rem;
-  margin-top: 2rem;
-  background-color: rgb(240, 237, 237);
-}
-.fb,
-.pint,
-.tw,
-.gg {
-  margin-right: 1.5rem;
-}
-
-.content2 {
-  margin: 2rem;
-  display: flex;
-  justify-content: space-between;
-  padding: 0 5rem;
-}
-.image {
-  margin: 1rem;
+html,
+body {
+  font-size: 100%;
 }
 .content3,
 .contact {
@@ -28,9 +8,4 @@
 }
 .contact {
   margin-top: 5rem;
-}
-.connect a {
-  text-decoration: none;
-  margin-left: 5rem;
-  margin-bottom: 1rem;
 }

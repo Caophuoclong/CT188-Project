@@ -43,7 +43,6 @@ nav ul > li {
 }
 footer {
   background-color: #ffb213;
-  height: 4%;
   padding: 0.5rem;
 }
 main {
@@ -77,10 +76,7 @@ a span {
   margin: 0.5rem;
   border-radius: 45%;
 }
-form {
-  display: flex;
-  justify-content: space-between;
-}
+
 .search {
   display: flex;
   position: relative;
@@ -165,6 +161,34 @@ ul li {
 .new-price {
   font-size: 1.5rem;
   color: #ff1313;
+}
+.content1 {
+  display: flex;
+  justify-content: space-around;
+
+  font-size: 1.5rem;
+  margin-top: 2rem;
+}
+.fb,
+.pint,
+.tw,
+.gg {
+  margin-right: 1.5rem;
+}
+
+.content2 {
+  margin: 2rem;
+  display: flex;
+  justify-content: space-between;
+  padding: 0 5rem;
+}
+.image {
+  margin: 1rem;
+}
+.connect a {
+  text-decoration: none;
+  margin-left: 5rem;
+  margin-bottom: 1rem;
 }
 @media screen and (max-width: 1024px) {
   .search {
