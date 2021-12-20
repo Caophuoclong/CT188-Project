@@ -71,66 +71,78 @@
         </div>
       </header>
       <div class="contact">
-        <h1>LIÊN HỆ CHO CHÚNG TÔI</h1>
-        <form
-          action="#"
-          method="post"
-          id="signup-form"
-          enctype="application/x-www-form-urlencoded"
-          onsubmit="return lienhe(this);"
-        >
-          <ul>
-            <li>
-              <input
-                type="text"
-                name="hoten"
-                id="hoten"
-                minlength="4"
-                placeholder="Họ tên*"
-              />
-            </li>
-            <li>
-              <input
-                type="text"
-                name="email"
-                id="email"
-                onkeydown="validation()"
-                placeholder="Email*"
-              />
-            </li>
-            <li>
-              <input
-                type="text"
-                name="sdt"
-                id="sdt"
-                onkeydown="validation()"
-                placeholder="Số điện thoại*"
-              />
-            </li>
-            <li>
-              <input
-                type="text"
-                name="sdt"
-                id="sdt"
-                onkeydown="validation()"
-                placeholder="Chủ đề"
-              />
-            </li>
-            <li>
-              <textarea
-                name="content"
-                id="content"
-                cols="50"
-                rows="7"
-                minlength="10"
-                placeholder="Nội dung cần liên hệ*"
-              ></textarea>
-            </li>
-            <li>
-              <input type="submit" value="GỬI LIÊN HỆ" />
-            </li>
-          </ul>
-        </form>
+        <div class="container">
+          <div class="form_ct">
+            <h1>LIÊN HỆ CHO CHÚNG TÔI</h1>
+            <form
+              action="#"
+              method="get"
+              id="form-contact"
+              enctype="application/x-www-form-urlencoded"
+            >
+              <ul>
+                <li>
+                  <input
+                    type="text"
+                    name="hoten"
+                    id="hoten"
+                    placeholder="Họ tên*"
+                    onchange="testName()"
+                  />
+                  <p id="errorName"></p>
+                </li>
+                <li>
+                  <input
+                    type="text"
+                    name="email"
+                    id="email"
+                    placeholder="Email*"
+                    onchange="testEmail()"
+                  />
+                  <p id="errorEmail"></p>
+                </li>
+                <li>
+                  <input
+                    type="text"
+                    name="sdt"
+                    id="sdt"
+                    placeholder="Số điện thoại*"
+                    onchange="testPhone()"
+                  />
+                  <p id="errorPhone"></p>
+                </li>
+                <li>
+                  <input type="text" name="sdt" id="sdt" placeholder="Chủ đề" />
+                </li>
+                <li>
+                  <textarea
+                    name="content"
+                    id="content"
+                    cols="50"
+                    rows="7"
+                    placeholder="Nội dung cần liên hệ*"
+                    onchange="testContent()"
+                  ></textarea>
+                  <span id="errorContent"></span>
+                </li>
+                <li>
+                  <input type="submit" value="GỬI LIÊN HỆ" />
+                </li>
+              </ul>
+            </form>
+          </div>
+        </div>
+
+        <div id="map">
+          <iframe
+            src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3928.8414543437184!2d105.76842661401852!3d10.029938975271905!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x31a0895a51d60719%3A0x9d76b0035f6d53d0!2zxJDhuqFpIGjhu41jIEPhuqduIFRoxqE!5e0!3m2!1svi!2s!4v1638611231454!5m2!1svi!2s"
+            width="600"
+            height="450"
+            style="border: 0"
+            allowfullscreen=""
+            loading="lazy"
+          ></iframe>
+        </div>
       </div>
     </main>
     <footer>
@@ -217,7 +229,7 @@
       </div>
       <div class="content3">
         <p>
-          Mobile Store địa chỉ: 999, Toà nhà Diamond, Đường Nguyễn Huệ, Quận 1
+          Mobile Store địa chỉ: Khu II, Đ. 3/2, Xuân Khánh, Ninh Kiều, Cần Thơ
         </p>
       </div>
     </footer>
@@ -237,5 +249,6 @@
       crossorigin="anonymous"
     ></script>
     <script src="./assets/js/index.js"></script>
+    <script src="./assets/js/contact.js"></script>
   </body>
 </html>
