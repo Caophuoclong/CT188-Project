@@ -93,6 +93,4 @@ $(document).ready(function () {
 		nextArrow: '<button class="slick-next slick-arrow d-flex justify-content-center btn-outline-light"><i class="material-icons" >arrow_forward_ios</i></button>',
 
 	})
-
-
 })

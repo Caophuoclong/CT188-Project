@@ -57,8 +57,9 @@ function buyNow(id) {
     addToCart(id);
     location.href = "/cart.html";
 }
+const errorColor = "#ffb213, #e3242b";
+const successColor = "#00b09b, #96c93d"
 function addToCart(id) {
-    console.log(id);
     const listCartItem = JSON.parse(localStorage.getItem("cartItem"));
     if (!listCartItem) {
         const cartItem = [];
@@ -85,6 +86,7 @@ function addToCart(id) {
         localStorage.setItem("cartItem", JSON.stringify(listCartItem));
         refreshCartLength();
     }
+    Toast("Thêm vào giỏ hàng thành công!", successColor);
 
 
 }
@@ -93,6 +95,23 @@ function handleFlashClick(id) {
     const pos = $(e).position();
     window.scrollTo(pos);
     e.hover();
+}
+
+function Toast(content, color) {
+    Toastify({
+        text: content,
+        duration: 2000,
+        newWindow: true,
+        close: true,
+        gravity: "bottom", // `top` or `bottom`
+        position: "right", // `left`, `center` or `right`
+        stopOnFocus: true, // Prevents dismissing of toast on hover
+        style: {
+            background: `linear-gradient(to right, ${color})`,
+            fontSize: "2rem",
+        },
+        onClick: function () { } // Callback after click
+    }).showToast();
 }
 $(document).ready(() => {
     refreshCartLength();

@@ -25,6 +25,14 @@ function validatePhone(value) {
     const regex = /((09|03|07|08|05)+([0-9]{8})\b)/g;
     return regex.test(value);
 }
+function validateName(value) {
+    console.log(value);
+    console.log(value.length);
+    return value.length > 6;
+}
+function validateAddress(value) {
+    return value.length > 12;
+}
 function testPhone() {
     const value = event.target.value;
     if (validatePhone(value)) {

@@ -28,6 +28,12 @@
       type="image/vnd.microsoft.icon"
       href="./assets/images/logo.jpg"
     />
+    <link
+      rel="stylesheet"
+      type="text/css"
+      href="https://cdn.jsdelivr.net/npm/toastify-js/src/toastify.min.css"
+    />
+
     <link rel="stylesheet" href="./assets/css/index.css" />
     <link rel="stylesheet" href="./assets/css/footer.css" />
     <link rel="stylesheet" href="./assets/css/contact.css" />
@@ -71,8 +77,9 @@
           </button>
         </form>
         <div>
-          <a href="cart.html" class="">
+          <a href="cart.html" class="cart">
             <i class="material-icons" style="color: black">shopping_cart</i>
+            <span id="quantity" class="quantity">0</span>
             <span>Giỏ hàng</span>
           </a>
         </div>
@@ -261,6 +268,11 @@
       integrity="sha256-H+K7U5CnXl1h5ywQfKtSj8PCmoN9aaq30gDh27Xc0jk="
       crossorigin="anonymous"
     ></script>
+    <script
+      type="text/javascript"
+      src="https://cdn.jsdelivr.net/npm/toastify-js"
+    ></script>
+
     <script
       src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js"
       integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q"

@@ -180,6 +180,13 @@ ul li {
   margin-left: 5rem;
   margin-bottom: 1rem;
 }
+.fs > a,
+p {
+  font-size: 1.5rem;
+}
+#connect a:hover {
+  color: rgb(155, 152, 152);
+}
 @media screen and (max-width: 1024px) {
   .search {
     width: 30%;

@@ -22,6 +22,12 @@
       integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm"
       crossorigin="anonymous"
     />
+    <link
+      rel="stylesheet"
+      type="text/css"
+      href="https://cdn.jsdelivr.net/npm/toastify-js/src/toastify.min.css"
+    />
+
     <link rel="stylesheet" href="./assets/css/index.css" />
     <link rel="stylesheet" href="./assets/css/cart.css" />
     <title>Giỏ hàng</title>
@@ -142,7 +148,7 @@
                 <label for="athome">Nhận hàng tại nhà</label>
               </div>
               <div class="atStore">
-                <input type="radio" name="delivery" value="1" id="atstore" />
+                <input type="radio" name="delivery" value="0" id="atstore" />
                 <label for="atstore">Nhận hàng tại cửa hàng</label>
               </div>
             </div>
@@ -151,10 +157,10 @@
             <label class="title">Địa chỉ</label>
             <div class="address">
               <div class="addressProvince">
-                <select name="" id="">
+                <select name="province" id="">
                   <option value="ag">An giang</option>
                 </select>
-                <select name="" id="">
+                <select name="town" id="">
                   <option value="ag">Thi xa tan chau</option>
                 </select>
               </div>
@@ -167,7 +173,7 @@
                 />
               </div>
               <textarea
-                name=""
+                name="note"
                 id=""
                 style="
                   margin-top: 0px;
@@ -294,6 +300,11 @@
       crossorigin="anonymous"
     ></script>
     <script
+      type="text/javascript"
+      src="https://cdn.jsdelivr.net/npm/toastify-js"
+    ></script>
+
+    <script
       src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js"
       integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q"
       crossorigin="anonymous"
@@ -304,6 +315,7 @@
       crossorigin="anonymous"
     ></script>
     <script src="./assets/js/index.js"></script>
+    <script src="./assets/js/contact.js"></script>
     <script src="./assets/js/cart.js"></script>
   </body>
 </html>

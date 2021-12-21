@@ -69,9 +69,34 @@ $(document).ready(function () {
 
     $("#form").on("submit", (event) => {
         event.preventDefault();
-        alert("Order successfully!");
-        localStorage.removeItem("cartItem");
-        location.reload();
+        const email = event.currentTarget.email.value;
+        const fullname = event.currentTarget.fullname.value;
+        const phonenumber = event.currentTarget.numberphone.value;
+        const delivery = event.currentTarget.delivery.value;
+        const addressProvince = event.currentTarget.province.value;
+        const addressTown = event.currentTarget.town.value;
+        const addressDetail = event.currentTarget.addressDetail.value;
+        const note = event.currentTarget.note.value;
+        console.log(email, fullname, phonenumber, addressProvince, addressTown, addressDetail, delivery, note);
+        if (!validateEmail(email)) {
+            Toast("Email không hợp lệ!", errorColor);
+        }
+        else if (!validateAddress(addressDetail)) {
+            Toast("Địa chỉ quá ngắn!", errorColor);
+        }
+        else if (!validateName(fullname)) {
+            Toast("Họ tên không hợp lệ!", errorColor);
+        }
+        else if (!validatePhone(phonenumber)) {
+            Toast("Số điện thoại không hợp lệ!", errorColor);
+        }
+        else {
+            Toast("Đặt hàng thành công!", successColor);
+            localStorage.removeItem("cartItem");
+            refreshCartItem();
+            refreshCartLength();
+        }
+
     });
 
 
