@@ -1,0 +1,88 @@
+.baner {
+  width: 100%;
+  border-radius: 1.5rem;
+  margin: 0.5rem;
+}
+.baner_sale {
+  background-image: url(https://cdn.tgdd.vn/mwgcart/mwg-site/ContentMwg/images/noel/Tagline/TGDD/tagline_desktop.png);
+  background-size: 100%;
+  border-radius: 1.5rem;
+  padding: 1em;
+  color: white;
+  margin: 4em 0;
+}
+h1 {
+  position: relative;
+  text-align: center;
+  z-index: 100;
+}
+
+.slide-container {
+  width: 100%;
+  border-radius: 1.5rem;
+}
+.slide-item {
+  width: 100%;
+  border-radius: 1.5rem;
+  margin: 0.5rem;
+}
+.slide-item > img {
+  width: 100%;
+  height: 50em;
+  border-radius: 1.5rem;
+}
+.slick-arrow {
+  background-color: #fff;
+  border: none;
+  border-radius: 1rem;
+  font-size: 1.5rem;
+  padding: 0.5rem;
+  margin: 0.5rem;
+  cursor: pointer;
+  text-align: center;
+  transition: all 0.2s linear;
+}
+.slick-arrow > i {
+  color: black;
+}
+.slick-arrow:hover {
+  background-color: #ffb213;
+}
+.slick-arrow:hover i {
+  color: #fff;
+}
+
+.slick-prev {
+  position: absolute;
+  top: 50%;
+  left: 2rem;
+  transform: translateY(-50%);
+  z-index: 1;
+}
+.slick-next {
+  position: absolute;
+  top: 50%;
+  right: 2rem;
+  transform: translateY(-50%);
+  z-index: 1;
+}
+.slick-dots {
+  display: flex;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 0 2rem;
+}
+.slick-dots button {
+  font-size: 2em;
+  width: 2rem;
+  height: 2rem;
+  border-radius: 100rem;
+  outline: none;
+  border: none;
+  background-color: rgb(160, 160, 160);
+}
+
+.slick-dots .slick-active button {
+  background-color: #ffb213;
+}
