@@ -1,0 +1,156 @@
+
+ .warranty{
+    font-size: 2rem; 
+    font-family: 'Times New Roman', Times, serif;
+ }
+
+.frm{
+    border-radius: 2%;
+    box-shadow: -10px -10px 5px -8px #888888;
+    color: #ffb213;
+
+}
+
+form{
+    flex-direction: column;
+    align-items: center;   
+}
+
+fieldset{
+    font-size: 3rem;
+    box-shadow: -10px -10px 8px -8px #888888;
+    border: solid rgb(189, 243, 243);
+    padding:1rem 2rem;
+    
+    background-color: #8EC5FC;
+    background-image: linear-gradient(289deg, #9ee5f1 0%, #90f7e0 40%, #e4eb87 82%);
+    border-radius: 1%;
+}
+.p, .div, span {
+    padding: 0.5rem;
+    font-size: 2rem; 
+}
+
+.div a{
+    text-decoration:underline;
+    color: rgb(14, 44, 95);
+}
+.button{
+        font-size: 1.8rem;
+        position: relative;
+        appearance: none;
+        border: none;
+        color: white;
+        cursor: pointer;
+        outline: none;
+        overflow: hidden;
+        border-radius: 0.5rem;
+}
+.left{
+   padding-top: 5rem;
+}
+
+.span{
+    padding: 1.5rem;
+    border-radius: 0.5rem;
+    position: relative;
+    background-color: yellow; 
+    animation-name: ads;
+    animation-duration: 5s;
+    font-size: 2rem;
+}
+
+@keyframes ads{
+    0% {background-color: yellow; left:0px; top:0px;}
+    25% {background-color:rgb(240, 42, 42); left:200px; top:0px;}
+    50% {background-color:#e6602c ; left:200px; top:50px;}
+    75% {background-color:rgb(199, 240, 16); left:0px; top:50px;}
+    100% {background-color:yellow; left:0px; top:0px;}
+  }
+a:hover{
+    color: yellow;
+}
+
+
+
+.md_head{
+   background-color: #ffb213;
+   font-family: monospace;
+   text-transform: uppercase;
+   text-shadow: 1px 1px #eeaec1;
+   text-align: center;
+}
+.md_tt{
+    font-size: 1.8rem;
+}
+
+ .md_bd{
+    font-family: monospace;
+    background: linear-gradient(-75deg,#e4e14a  0%, #00C9FF 100%);
+    color: #181102;
+ }
+
+ .input{
+    font-size: 1.5rem;
+    border-radius: 0.5rem;
+ }
+
+ .btn-submit {background-image: linear-gradient(to right, #1D2B64 0%, #eeaec1  80%, #1D2B64  100%)}
+ .btn-submit {
+    padding: 1rem 1.5rem;
+    text-align: center;
+    text-transform: uppercase;
+    transition: 0.5s;
+    background-size: 200% auto;
+    color: white;            
+    box-shadow: 0 0 20px #eee;
+    border-radius: 1rem;
+   
+  }
+
+  .btn-submit:hover {
+    background-position: right center; 
+    color: #fff;
+    text-decoration: none;
+  }
+
+  .btn-sign-in {background-image: linear-gradient(to right, #1FA2FF 0%, #12D8FA  51%, #71ff1f  100%)}
+  .btn-sign-in {
+    padding: 1rem 1.5rem;
+    text-align: center;
+    text-transform: uppercase;
+    transition: 0.5s;
+    background-size: 200% auto;
+    color: white;            
+    box-shadow: 0 0 20px #eee;
+    border-radius: 1rem;
+   
+  }
+
+  .btn-sign-in:hover {
+    background-position: right center; 
+    color: #ffb213;
+    text-decoration: none;
+  }
+ 
+    .btn-ycn {background-image: linear-gradient(to right, #08263b 0%, #2e5564  51%, #1fa2f1 100%)}
+    .btn-ycn {
+    padding: 0.5rem 1.5rem;
+    text-align: center;
+    text-transform: uppercase;
+    transition: 0.5s;
+    background-size: 200% auto;
+    color: white;            
+    box-shadow: 0 0 20px #eee;
+    border-radius: 1rem;
+  }
+ 
+  .btn-ycn:hover {
+    background-position: right center;
+    color: yellow;
+    text-decoration: none;
+  }
+
+  .fa-user:hover, .fa-envelope:hover, .fa-key:hover, .fa-star{
+        color: yellow;
+  }
