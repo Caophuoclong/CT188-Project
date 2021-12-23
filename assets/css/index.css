@@ -5,6 +5,7 @@ body {
   padding: 0;
   background-color: #fff;
   font-size: 62.5%;
+  min-width: 75rem;
 }
 body {
   height: 100vh;

@@ -360,6 +360,16 @@ const product = [
       "https://cdn.tgdd.vn/Products/Images/42/236588/realme-8-5g-blue-1-600x600.jpg",
   },
 ];
+const listLogoBrand =
+{
+  "samsung": "https://cdn.hoanghamobile.com/i/cat/Uploads/2020/11/30/samsung-logo-transparent.png",
+  "xiaomi": "https://cdn.hoanghamobile.com/i/cat/Uploads/2021/05/27/xiaomi-global-logo-rgb-logo-moi.png",
+  "oppo": "https://cdn.hoanghamobile.com/i/cat/Uploads/2020/09/14/brand%20(3).png",
+  "vsmart": "https://cdn.hoanghamobile.com/i/cat/Uploads/2020/09/14/brand%20(1).png",
+  "bphone": "https://cdn.hoanghamobile.com/i/cat/Uploads/2020/11/30/logo-bphone.png"
+}
+
+
 
 const flashSales = [];
 

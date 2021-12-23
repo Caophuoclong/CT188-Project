@@ -113,6 +113,7 @@ function Toast(content, color) {
         onClick: function () { } // Callback after click
     }).showToast();
 }
+
 $(document).ready(() => {
     refreshCartLength();
 })
