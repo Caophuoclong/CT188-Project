@@ -4,172 +4,428 @@
     <meta charset="UTF-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <link rel="shortcut icon" href="./assets/images/shop.png">
+    <link rel="shortcut icon" href="./assets/images/shop.png" />
 
-    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet"/> 
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.1/css/all.min.css" />
+    <link
+      href="https://fonts.googleapis.com/icon?family=Material+Icons"
+      rel="stylesheet"
+    />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.1/css/all.min.css"
+    />
 
-    
     <link
       rel="stylesheet"
       href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css"
       integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm"
-      crossorigin="anonymous"/>
+      crossorigin="anonymous"
+    />
 
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
-    
+
     <link rel="stylesheet" href="./assets/css/index.css" />
-    <link rel="stylesheet" href="./assets/css/warranty.css">
+    <link rel="stylesheet" href="./assets/css/warranty.css" />
     <title>Bảo hành</title>
   </head>
   <body>
-      <nav>
-          <ul id="nav-mobile" class="right hide-on-med-and-down">
-            <li><a href="index.html">Trang chủ</a></li>
-            <li><a href="sales.html">Khuyến mãi</a></li>
-            <li><a href="cart.html">Giỏ hàng</a></li>
-            <li><a href="warranty.html">Bảo hành</a></li>
-            <li><a href="contact.html">Liên hệ</a></li>
-          </ul>
-      </nav>
-    <main >
-        <header>
-            <a href="/"
-              ><img src="https://picsum.photos/70           " alt="" id="logo" />
-              <span>Mobile Store</span>
-            </a>
-            <form action="/search" class="search">
-              <input type="text" placeholder="Tìm kiếm" />
-              <button class="icon-search" type="submit">
-                <i class="material-icons">search</i>
+    <button
+      onclick="scrollToTop()"
+      class="scroll-to-top"
+      style="font-size: 2rem"
+    >
+      <i class="material-icons" style="color: black">arrow_upward</i>
+    </button>
+    <nav id="nav-mobile" class="py-1">
+      <ul class="d-flex justify-content-end list-unstyled">
+        <li class="p-0 mx-3">
+          <a href="index.html">Trang chủ</a>
+        </li>
+        <li class="p-0 mx-3">
+          <a href="sales.html">Khuyến mãi</a>
+        </li>
+        <li class="p-0 mx-3"><a href="cart.html">Giỏ hàng</a></li>
+        <li class="p-0 mx-3">
+          <a href="news.html">Tin tức</a>
+        </li>
+        <li class="p-0 mx-3">
+          <a href="contact.html">Liên hệ</a>
+        </li>
+      </ul>
+    </nav>
+    <main>
+      <header>
+        <a href="/"
+          ><img src="https://picsum.photos/70           " alt="" id="logo" />
+          <span>Mobile Store</span>
+        </a>
+        <form action="/search" class="search">
+          <input type="text" placeholder="Tìm kiếm" />
+          <button class="icon-search" type="submit">
+            <i class="material-icons">search</i>
+          </button>
+        </form>
+        <div>
+          <a href="cart.html" class="cart">
+            <i class="material-icons" style="color: black">shopping_cart</i>
+            <span id="quantity" class="quantity">0</span>
+            <span>Giỏ hàng</span>
+          </a>
+        </div>
+      </header>
+      <div class="container warranty">
+        <div class="row">
+          <!--Cột bên trái-->
+          <div class="col-sm-3 pt-5">
+            <p style="font-size: 1.5rem; color: rgb(246, 250, 17)">
+              <i class="fas fa-star"></i> Tips bảo vệ màn hình điện thoại:
+            </p>
+            <div id="carousel" class="carousel slide" data-ride="carousel">
+              <div class="carousel-inner">
+                <div class="carousel-item active">
+                  <img
+                    src="https://tranlinhmobile.vn/upload/data/images/2.jpg"
+                    class="d-block w-100"
+                  />
+                </div>
+                <div class="carousel-item">
+                  <img
+                    src="https://tranlinhmobile.vn/upload/data/images/3.jpg"
+                    class="d-block w-100"
+                  />
+                </div>
+                <div class="carousel-item">
+                  <img
+                    src="https://tranlinhmobile.vn/upload/data/images/4.jpg"
+                    class="d-block w-100"
+                  />
+                </div>
+              </div>
+              <button
+                class="carousel-control-prev"
+                type="button"
+                data-target="#carousel"
+                data-slide="prev"
+              >
+                <span
+                  class="carousel-control-prev-icon"
+                  aria-hidden="true"
+                ></span>
+                <span class="visually-hidden"></span>
               </button>
-            </form>
-            <div>
-              <a href="cart.html" class="cart">
-                <i class="material-icons" style="color: black">shopping_cart</i>
-                <span id="quantity" class="quantity">0</span>
-                <span>Giỏ hàng</span>
-              </a>
-            </div>
-        </header>
-        <div class="container warranty" >
-          <div class="row">
-              <!--Cột bên trái-->
-                <div class="col-sm-3 pt-5">
-                  <p style="font-size: 1.5rem;  color: rgb(246, 250, 17);"><i class="fas fa-star"></i> Tips bảo vệ màn hình điện thoại:</p>
-                  <div id="carousel" class="carousel slide" data-ride="carousel">                    
-                    <div class="carousel-inner">
-                        <div class="carousel-item active">
-                            <img src="https://tranlinhmobile.vn/upload/data/images/2.jpg" class="d-block w-100 ">
-                        </div>                                                                       
-                        <div class="carousel-item">
-                            <img src="https://tranlinhmobile.vn/upload/data/images/3.jpg" class="d-block w-100" >
-                        </div>
-                        <div class="carousel-item">
-                          <img src="https://tranlinhmobile.vn/upload/data/images/4.jpg" class="d-block w-100">
-                      </div>                        
-                    </div>
-                    <button class="carousel-control-prev" type="button" data-target="#carousel" data-slide="prev">
-                        <span class="carousel-control-prev-icon" aria-hidden="true"></span>
-                        <span class="visually-hidden"></span>
-                    </button>
-                    <button class="carousel-control-next" type="button" data-target="#carousel" data-slide="next">
-                        <span class="carousel-control-next-icon" aria-hidden="true"></span>
-                        <span class="visually-hidden"></span>
-                    </button>
-                  </div>  
-    
-                </div>
-                <!--Cột giữa-->
-                <div class="col-sm-6 pt-5">  
-                  <div class="container-fluid">  
-                    <fieldset>   
-                        <p style="text-align: center;"><i class="fas fa-tools"></i></p>  
-                        <p class="p">Hãy nhập thông tin bảo hành vào box dưới đây </p>
-                        <form action="#" class="frm" onsubmit="return checkValidate()" method="get" target="_self" > 
-                            <div class="form-group">
-                              <label for="phone">Số điện thoại:</label>
-                              <input type="tel" id="phone" class="form-control  input" required placeholder="Enter phone number">
-                          </div>
-                          <div class="form-group">
-                              <label for="code">Mã bảo hành:</label>
-                              <input type="text" id="code" class="form-control  input" required placeholder="Enter code">
-                          </div>
-                          <button type="submit" class="btn button btn-submit input"id="submit">Submit</button> 
-                        </form>
-                  </fieldset>
-                  </div>
-                </div>
-                  <!--Cột bên phải-->
-                <div class="col-sm-3">   
-                  <div class="div">
-                    <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSDbWbXzWTHphHtWQRtfFpUifvn0jLN3WvXoA&usqp=CAU" alt="">
-                  <ul class="nav flex-column">
-                    <li class="nav-item">
-                      <a class="nav-link active" target="_blank" href="https://7onez.com/cach-bao-ve-quyen-rieng-tu-cua-ban-tren-dien-thoai-thong-minh-12-tips-and-tricks.html">Cách bảo vệ quyền riêng tư của bạn trên điện thoại thông minh</a>
-                    </li>
-                    <li class="nav-item">
-                      <a class="nav-link" target="_blank" href="https://www.thegioididong.com/tin-tuc/10-meo-hay-de-bao-ve-chiec-dien-thoai-thong-minh-cua-ban-1339399">Bảo vệ điện thoại thông minh</a>
-                    </li>
-                    <li class="nav-item">
-                      <a class="nav-link" target="_blank" href="https://quantrimang.com/6-meo-nho-bao-ve-mat-khi-su-dung-dien-thoai-118514">Mẹo nhỏ bảo vệ mắt khi sử dụng</a>
-                    </li>
-                  </ul>
-                </div>
+              <button
+                class="carousel-control-next"
+                type="button"
+                data-target="#carousel"
+                data-slide="next"
+              >
+                <span
+                  class="carousel-control-next-icon"
+                  aria-hidden="true"
+                ></span>
+                <span class="visually-hidden"></span>
+              </button>
             </div>
           </div>
-          <!--Mời tham gia diễn đàn-->
-          <!--Modal-->
-            <div class="row pt-5">
-              <div class="container-fluid pt-5 pb-5">
-                <!-- Button trigger modal -->
-               <span class="span" > Hãy tham gia Cộng đồng <button type="button" class="btn btn-ycn button" data-toggle="modal" data-target="#signinModal">Yêu công nghệ</button> để khám phá những kiến thức công nghệ thú vị bạn nhé!</span>
-            
+          <!--Cột giữa-->
+          <div class="col-sm-6 pt-5">
+            <div class="container-fluid">
+              <fieldset>
+                <p style="text-align: center"><i class="fas fa-tools"></i></p>
+                <p class="p">Hãy nhập thông tin bảo hành vào box dưới đây</p>
+                <form
+                  action="#"
+                  class="frm"
+                  onsubmit="return checkValidate()"
+                  method="get"
+                  target="_self"
+                >
+                  <div class="form-group">
+                    <label for="phone">Số điện thoại:</label>
+                    <input
+                      type="tel"
+                      id="phone"
+                      class="form-control input"
+                      required
+                      placeholder="Enter phone number"
+                    />
+                  </div>
+                  <div class="form-group">
+                    <label for="code">Mã bảo hành:</label>
+                    <input
+                      type="text"
+                      id="code"
+                      class="form-control input"
+                      required
+                      placeholder="Enter code"
+                    />
+                  </div>
+                  <button
+                    type="submit"
+                    class="btn button btn-submit input"
+                    id="submit"
+                  >
+                    Submit
+                  </button>
+                </form>
+              </fieldset>
+            </div>
+          </div>
+          <!--Cột bên phải-->
+          <div class="col-sm-3">
+            <div class="div">
+              <img
+                src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSDbWbXzWTHphHtWQRtfFpUifvn0jLN3WvXoA&usqp=CAU"
+                alt=""
+              />
+              <ul class="nav flex-column">
+                <li class="nav-item">
+                  <a
+                    class="nav-link active"
+                    target="_blank"
+                    href="https://7onez.com/cach-bao-ve-quyen-rieng-tu-cua-ban-tren-dien-thoai-thong-minh-12-tips-and-tricks.html"
+                    >Cách bảo vệ quyền riêng tư của bạn trên điện thoại thông
+                    minh</a
+                  >
+                </li>
+                <li class="nav-item">
+                  <a
+                    class="nav-link"
+                    target="_blank"
+                    href="https://www.thegioididong.com/tin-tuc/10-meo-hay-de-bao-ve-chiec-dien-thoai-thong-minh-cua-ban-1339399"
+                    >Bảo vệ điện thoại thông minh</a
+                  >
+                </li>
+                <li class="nav-item">
+                  <a
+                    class="nav-link"
+                    target="_blank"
+                    href="https://quantrimang.com/6-meo-nho-bao-ve-mat-khi-su-dung-dien-thoai-118514"
+                    >Mẹo nhỏ bảo vệ mắt khi sử dụng</a
+                  >
+                </li>
+              </ul>
+            </div>
+          </div>
+        </div>
+        <!--Mời tham gia diễn đàn-->
+        <!--Modal-->
+        <div class="row pt-5">
+          <div class="container-fluid pt-5 pb-5">
+            <!-- Button trigger modal -->
+            <span class="span">
+              Hãy tham gia Cộng đồng
+              <button
+                type="button"
+                class="btn btn-ycn button"
+                data-toggle="modal"
+                data-target="#signinModal"
+              >
+                Yêu công nghệ
+              </button>
+              để khám phá những kiến thức công nghệ thú vị bạn nhé!</span
+            >
+
             <!-- Modal -->
-                  <div class="modal fade" id="signinModal" tabindex="-1" aria-labelledby="signinModal" aria-hidden="true">
-                      <div class="modal-dialog modal-dialog-centered modal-dialog-scrollable">
-                      <div class="modal-content">
-                          <div class="modal-header  md_head">
-                            <span class="modal-title md_tt" id="#signinModalLabel">Hãy đăng ký để vào diễn đàn của chúng tôi <i class="far fa-smile-wink"></i></span>
-                         </div>
+            <div
+              class="modal fade"
+              id="signinModal"
+              tabindex="-1"
+              aria-labelledby="signinModal"
+              aria-hidden="true"
+            >
+              <div
+                class="
+                  modal-dialog modal-dialog-centered modal-dialog-scrollable
+                "
+              >
+                <div class="modal-content">
+                  <div class="modal-header md_head">
+                    <span class="modal-title md_tt" id="#signinModalLabel"
+                      >Hãy đăng ký để vào diễn đàn của chúng tôi
+                      <i class="far fa-smile-wink"></i
+                    ></span>
+                  </div>
 
-                         <form action="#" onsubmit="return formValidate(this);" method="post" target="_self" class="md_bd">
-                            <div class="modal-body ">
-                                <div class="form-group">
-                                  <label for="username"><i class="fas fa-user"></i> Username: </label>
-                                  <input type="text" class="form-control input" required placeholder="Enter user_name" id="username">
-                                </div>
-                            
-                                <div class="form-group">
-                                    <label for="email"><i class="far fa-envelope"></i> Email: </label>
-                                    <input type="email" class="form-control input" required placeholder="@Enter your email" id="email">
-                                </div>
+                  <form
+                    action="#"
+                    onsubmit="return formValidate(this);"
+                    method="post"
+                    target="_self"
+                    class="md_bd"
+                  >
+                    <div class="modal-body">
+                      <div class="form-group">
+                        <label for="username"
+                          ><i class="fas fa-user"></i> Username:
+                        </label>
+                        <input
+                          type="text"
+                          class="form-control input"
+                          required
+                          placeholder="Enter user_name"
+                          id="username"
+                        />
+                      </div>
 
-                                <div class="form-group">
-                                  <label for="pwd"><i class="fas fa-key"></i> Password: </label>
-                                  <input type="password" class="form-control input" required placeholder="Enter your password" id="pwd">
-                                </div>
+                      <div class="form-group">
+                        <label for="email"
+                          ><i class="far fa-envelope"></i> Email:
+                        </label>
+                        <input
+                          type="email"
+                          class="form-control input"
+                          required
+                          placeholder="@Enter your email"
+                          id="email"
+                        />
+                      </div>
 
-                                <div class="form-group">
-                                  <label for="re_pwd"><i class="fas fa-key"></i> Re-enter password*: </label>
-                                  <input type="password" class="form-control input" required placeholder="Re-Enter your password" id="re_pwd">
-                                </div> 
-                            </div>
+                      <div class="form-group">
+                        <label for="pwd"
+                          ><i class="fas fa-key"></i> Password:
+                        </label>
+                        <input
+                          type="password"
+                          class="form-control input"
+                          required
+                          placeholder="Enter your password"
+                          id="pwd"
+                        />
+                      </div>
 
-                            <div class="modal-footer">
-                              <div class="form-group">
-                                <button type="submit" class=" btn button btn-sign-in input" data-bs-dismiss="modal" aria-label="submit">Sign-in</button>
-                              </div>
-                            </div>
-                        </form>
+                      <div class="form-group">
+                        <label for="re_pwd"
+                          ><i class="fas fa-key"></i> Re-enter password*:
+                        </label>
+                        <input
+                          type="password"
+                          class="form-control input"
+                          required
+                          placeholder="Re-Enter your password"
+                          id="re_pwd"
+                        />
                       </div>
                     </div>
-                  </div>
-              </div>         
-            </div> 
+
+                    <div class="modal-footer">
+                      <div class="form-group">
+                        <button
+                          type="submit"
+                          class="btn button btn-sign-in input"
+                          data-bs-dismiss="modal"
+                          aria-label="submit"
+                        >
+                          Sign-in
+                        </button>
+                      </div>
+                    </div>
+                  </form>
+                </div>
+              </div>
+            </div>
+          </div>
         </div>
+      </div>
     </main>
-    <footer></footer>
+    <footer>
+      <div class="container my-4" id="connect">
+        <div class="row">
+          <div class="col fs">
+            <h1>Về Mobile Store</h1>
+            <a href="">Giới thiệu về Mobile Store</a>
+            <a href="">Chính sách bảo mật thanh toán</a>
+            <a href="">Chính sách bảo mật thông tin cá nhân</a>
+            <a href="tel:1900-0000">Hotline: 1900-0000</a>
+          </div>
+          <div class="col fs">
+            <h1>Hỗ trợ khách hàng</h1>
+            <a href="">Giải quyết khiếu nại</a>
+            <a href="">Hướng dẫn đặt hàng</a>
+            <a href="">Chính sách đổi trả</a>
+            <a href="mailto:hotro@mobilestore.vn"
+              >Hỗ trợ khách hàng: hotro@mobilestore.vn</a
+            >
+          </div>
+          <div class="col fs">
+            <h1>Kết nối với chúng tôi</h1>
+            <a href=""
+              ><i class="fab fa-facebook text-info fa-2x fb mb-3"></i
+              >Facebook</a
+            >
+            <a href=""
+              ><i class="fab fa-pinterest text-danger fa-2x pint mb-3"></i
+              >Pinterest</a
+            >
+            <a href=""
+              ><i class="fab fa-twitter twitter text-info fa-2x tw mb-3"></i
+              >Twitter</a
+            >
+            <a href=""
+              ><i class="fab fa-google-plus-g text-danger fa-2x gg"></i
+              >Google+</a
+            >
+          </div>
+        </div>
+      </div>
+      <div class="container">
+        <div class="row justify-content-md-center">
+          <div class="col col-lg6">
+            <h1>Cách thức thanh toán</h1>
+            <img
+              src="./assets/images/jcb.jfif"
+              alt=""
+              width="50px"
+              class="m-3"
+            />
+            <img
+              src="./assets/images/momo.png"
+              alt=""
+              width="50px"
+              class="m-3"
+            />
+            <img
+              src="./assets/images/visa.png"
+              alt=""
+              width="50px"
+              class="m-3"
+            />
+            <img
+              src="./assets/images/zalopay.jfif"
+              alt=""
+              width="50px"
+              class="m-3"
+            />
+            <img
+              src="./assets/images/napas.png"
+              alt=""
+              width="50px"
+              class="m-3"
+            />
+          </div>
+          <div class="col col-lg-4">
+            <h1>Chứng nhận</h1>
+            <img
+              src="./assets/images/dkbct.png"
+              alt=""
+              width="100px"
+              class="m-3"
+            />
+            <img
+              src="./assets/images/tbbct.png"
+              alt=""
+              width="100px"
+              class="m-3"
+            />
+          </div>
+        </div>
+      </div>
+      <div class="content3">
+        <p>
+          Mobile Store địa chỉ: Khu II, Đ. 3/2, Xuân Khánh, Ninh Kiều, Cần Thơ
+        </p>
+      </div>
+    </footer>
 
     <script
       src="https://code.jquery.com/jquery-3.6.0.js"
