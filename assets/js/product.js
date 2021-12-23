@@ -360,17 +360,17 @@ const product = [
       "https://cdn.tgdd.vn/Products/Images/42/236588/realme-8-5g-blue-1-600x600.jpg",
   },
 ];
-const listLogoBrand =
-{
-  "apple": "https://cdn.hoanghamobile.com/i/cat/Uploads/2021/01/19/loooooo.png",
-  "samsung": "https://cdn.hoanghamobile.com/i/cat/Uploads/2020/11/30/samsung-logo-transparent.png",
-  "xiaomi": "https://cdn.hoanghamobile.com/i/cat/Uploads/2021/05/27/xiaomi-global-logo-rgb-logo-moi.png",
-  "oppo": "https://cdn.hoanghamobile.com/i/cat/Uploads/2020/09/14/brand%20(3).png",
-  "vsmart": "https://cdn.hoanghamobile.com/i/cat/Uploads/2020/09/14/brand%20(1).png",
-  "bphone": "https://cdn.hoanghamobile.com/i/cat/Uploads/2020/11/30/logo-bphone.png"
-}
-
-
+const listLogoBrand = {
+  apple: "https://cdn.hoanghamobile.com/i/cat/Uploads/2021/01/19/loooooo.png",
+  samsung:
+    "https://cdn.hoanghamobile.com/i/cat/Uploads/2020/11/30/samsung-logo-transparent.png",
+  xiaomi:
+    "https://cdn.hoanghamobile.com/i/cat/Uploads/2021/05/27/xiaomi-global-logo-rgb-logo-moi.png",
+  oppo: "https://cdn.hoanghamobile.com/i/cat/Uploads/2020/09/14/brand%20(3).png",
+  vsmart:
+    "https://cdn.hoanghamobile.com/i/cat/Uploads/2020/09/14/brand%20(1).png",
+  vivo: "https://cdn.hoanghamobile.com/i/cat/Uploads/2020/11/30/vivo-logo.png",
+};
 
 const flashSales = [];
 const _10Sales = [];
@@ -378,20 +378,19 @@ const _5Sales = [];
 product.forEach((item) => {
   const salePrice = Number(item.newPrice);
   const price = Number(item.price);
-  if (salePrice > 0 &&
-    salePrice !== undefined &&
-    salePrice !== null) {
-    if (
-      salePrice <= (price * 85) / 100
-    ) {
+  if (salePrice > 0 && salePrice !== undefined && salePrice !== null) {
+    if (salePrice <= (price * 85) / 100) {
       flashSales.push(item);
-    }
-    else if ((salePrice <= (price * 90) / 100) && (salePrice > (price * 86) / 100)) {
+    } else if (
+      salePrice <= (price * 90) / 100 &&
+      salePrice > (price * 86) / 100
+    ) {
       _10Sales.push(item);
-    }
-    else if ((salePrice <= (price * 95) / 100) && (salePrice > (price * 90) / 100)) {
+    } else if (
+      salePrice <= (price * 95) / 100 &&
+      salePrice > (price * 90) / 100
+    ) {
       _5Sales.push(item);
     }
   }
-
 });
