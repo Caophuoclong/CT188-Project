@@ -355,7 +355,7 @@ const product = [
     name: "Realme 8 5G",
     price: "7990000",
     brand: "realme",
-    newPrice: "54990000",
+    newPrice: "7590500",
     image:
       "https://cdn.tgdd.vn/Products/Images/42/236588/realme-8-5g-blue-1-600x600.jpg",
   },
@@ -386,10 +386,10 @@ product.forEach((item) => {
     ) {
       flashSales.push(item);
     }
-    else if (salePrice <= (price * 90) / 100) {
+    else if ((salePrice <= (price * 90) / 100) && (salePrice > (price * 86) / 100)) {
       _10Sales.push(item);
     }
-    else if (salePrice <= (price * 95) / 100) {
+    else if ((salePrice <= (price * 95) / 100) && (salePrice > (price * 90) / 100)) {
       _5Sales.push(item);
     }
   }

@@ -113,9 +113,9 @@ function Toast(content, color) {
         onClick: function () { } // Callback after click
     }).showToast();
 }
-function renderProduct(product, className, n) {
+function renderProduct(array, className, n) {
     $(className).html("");
-    product.forEach((item, index) => {
+    array.forEach((item, index) => {
         if (index >= n)
             return;
         let newPrice = Number(item.newPrice);
