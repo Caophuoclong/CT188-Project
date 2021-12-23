@@ -113,7 +113,112 @@ function Toast(content, color) {
         onClick: function () { } // Callback after click
     }).showToast();
 }
+function renderProduct(product, className, n) {
+    $(className).html("");
+    product.forEach((item, index) => {
+        if (index >= n)
+            return;
+        let newPrice = Number(item.newPrice);
+        let oldPrice = Number(item.price);
+        let price = 0;
+        if (!newPrice) {
+            price = oldPrice;
+        }
+        $(className).append(`
+		<div id="${item.id}" class="item col-xl-2 col-md-3 col-5 d-flex flex-column justify-content-center align-items-center p-0 m-3 px-2">
+          <img class="w-90 h-50" src="${item.image}" alt="" />
+          <p class="name">${item.name}</p>
+          <div class="price row">
+            ${price !== 0 ? `<p class="">${price.toLocaleString("it-IT", { style: "currency", currency: "VND" })}</p>` : `<p class="old-price text-secondary"><del>${oldPrice.toLocaleString("it-IT", { style: "currency", currency: "VND" })}</del></p>`}
+            ${item.newPrice.length > 0 ? `<p class="new-price text-danger">${newPrice.toLocaleString("it-IT", { style: "currency", currency: "VND" })}</p>` : ""}
+          </div>
+          <div class="sales-title ">Sales 10% when buy more items</div>
+		  <div class="btn-container">
+		  <button class="btn-item btn-add-to-cart" id="atc${item.id}" onclick="addToCart(${item.id})">
+		 	<i class="material-icons" >shopping_cart</i> 
+		  Add to cart</button>
+		  <button class="btn-item btn-add-to-cart" id="bn${item.id}" onclick="buyNow(${item.id})">Buy now</button>
+		  </div>	
+        </div>
+		`)
+    })
+}
+function renderProductByBrand(array, brand, className, n) {
+    $(className).html("");
+    array.forEach((item, index) => {
+        if (index >= n)
+            return;
+        if (item.brand === brand) {
+            let newPrice = Number(item.newPrice);
+            let oldPrice = Number(item.price);
+            let price = 0;
+            if (!newPrice) {
+                price = oldPrice;
+            }
+            $(className).append(`
+		<div id="${item.id}" class="item col-xl-2 col-md-3 col-5 d-flex flex-column justify-content-center align-items-center p-0 m-3 px-2 gap-auto">
+          <img class="w-90 h-50" src="${item.image}" alt="" />
+          <p class="name">${item.name}</p>
+          <div class="price row">
+            ${price !== 0 ? `<p class="">${price.toLocaleString("it-IT", { style: "currency", currency: "VND" })}</p>` : `<p class="old-price text-secondary"><del>${oldPrice.toLocaleString("it-IT", { style: "currency", currency: "VND" })}</del></p>`}
+            ${item.newPrice.length > 0 ? `<p class="new-price text-danger">${newPrice.toLocaleString("it-IT", { style: "currency", currency: "VND" })}</p>` : ""}
+          </div>
+          <div class="sales-title ">Sales 10% when buy more items</div>
+		  <div class="btn-container">
+		  <button class="btn-item btn-add-to-cart" id="atc${item.id}" onclick="addToCart(${item.id})">
+		 	<i class="material-icons" >shopping_cart</i> 
+		  Add to cart</button>
+		  <button class="btn-item btn-add-to-cart" id="bn${item.id}" onclick="buyNow(${item.id})">Buy now</button>
+		  </div>	
+        </div>
+		`)
+        }
 
+    })
+}
+
+function renderSales(array, className) {
+    array.forEach(item => {
+        let newPrice = Number(item.newPrice).toLocaleString("it-IT", { style: "currency", currency: "VND" });
+        let oldPrice = Number(item.price).toLocaleString("it-IT", { style: "currency", currency: "VND" });
+        $(className).append(`
+		<div onclick="handleFlashClick(${item.id})" style="height:40rem">
+		<div class="flash-sales-items d-flex flex-column justify-content-center align-items-center">
+		<img
+		  src="${item.image}"
+		  alt=""
+		/>
+		<div class="title text-center">${item.name}</div>
+		<div class="price row">
+		<p class="old-price text-secondary h-6"><del>${oldPrice}</del></p>
+		<p class="new-price text-danger h-6">${newPrice}</p>
+		</div>
+	  </div>
+		</div>
+		`)
+
+    })
+}
+function getUrlVars() {
+    let vars = [], hash;
+    let hashes = window.location.href.slice(window.location.href.indexOf('?') + 1).split('&');
+    for (let i = 0; i < hashes.length; i++) {
+        hash = hashes[i].split('=');
+        vars[hash[0]] = hash[1];
+    }
+    return vars;
+}
+function capitalizeFirstLetter(string) {
+    return string.charAt(0).toUpperCase() + string.slice(1);
+}
+function findItemsByName(string) {
+    const items = [];
+    product.forEach(item => {
+        if (item.name.toLocaleLowerCase().search(string) > -1)
+            items.push(item);
+    })
+    return items;
+}
 $(document).ready(() => {
     refreshCartLength();
 })

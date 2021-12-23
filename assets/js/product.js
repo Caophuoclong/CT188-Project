@@ -362,6 +362,7 @@ const product = [
 ];
 const listLogoBrand =
 {
+  "apple": "https://cdn.hoanghamobile.com/i/cat/Uploads/2021/01/19/loooooo.png",
   "samsung": "https://cdn.hoanghamobile.com/i/cat/Uploads/2020/11/30/samsung-logo-transparent.png",
   "xiaomi": "https://cdn.hoanghamobile.com/i/cat/Uploads/2021/05/27/xiaomi-global-logo-rgb-logo-moi.png",
   "oppo": "https://cdn.hoanghamobile.com/i/cat/Uploads/2020/09/14/brand%20(3).png",
@@ -372,16 +373,25 @@ const listLogoBrand =
 
 
 const flashSales = [];
-
+const _10Sales = [];
+const _5Sales = [];
 product.forEach((item) => {
   const salePrice = Number(item.newPrice);
   const price = Number(item.price);
-  if (
-    salePrice <= (price * 85) / 100 &&
-    salePrice > 0 &&
+  if (salePrice > 0 &&
     salePrice !== undefined &&
-    salePrice !== null
-  ) {
-    flashSales.push(item);
+    salePrice !== null) {
+    if (
+      salePrice <= (price * 85) / 100
+    ) {
+      flashSales.push(item);
+    }
+    else if (salePrice <= (price * 90) / 100) {
+      _10Sales.push(item);
+    }
+    else if (salePrice <= (price * 95) / 100) {
+      _5Sales.push(item);
+    }
   }
+
 });

@@ -26,6 +26,7 @@
 
     <link rel="stylesheet" href="./assets/css/index.css" />
     <link rel="stylesheet" href="./assets/css/warranty.css" />
+    <link rel="stylesheet" href="./assets/css/homepage.css" />
     <title>Bảo hành</title>
   </head>
   <body>
@@ -36,31 +37,65 @@
     >
       <i class="material-icons" style="color: black">arrow_upward</i>
     </button>
-    <nav id="nav-mobile" class="py-1">
-      <ul class="d-flex justify-content-end list-unstyled">
-        <li class="p-0 mx-3">
-          <a href="index.html">Trang chủ</a>
-        </li>
-        <li class="p-0 mx-3">
-          <a href="sales.html">Khuyến mãi</a>
-        </li>
-        <li class="p-0 mx-3"><a href="cart.html">Giỏ hàng</a></li>
-        <li class="p-0 mx-3">
-          <a href="news.html">Tin tức</a>
-        </li>
-        <li class="p-0 mx-3">
-          <a href="contact.html">Liên hệ</a>
-        </li>
-      </ul>
+
+    <nav
+      id="nav-mobile"
+      class="navbar navbar-expand-lg navbar-inverse bg-inverse"
+      class="py-1"
+    >
+      <button
+        class="navbar-toggler"
+        type="button"
+        data-toggle="collapse"
+        data-target="#navbarSupportedContent"
+        aria-controls="navbarSupportedContent"
+        aria-expanded="false"
+        aria-label="Toggle navigation"
+      >
+        <i
+          class="fa fa-align-justify"
+          style="font-size: 2rem"
+          aria-hidden="true"
+        ></i>
+      </button>
+      <div
+        class="collapse navbar-collapse justify-content-end"
+        id="navbarSupportedContent"
+      >
+        <ul class="navbar-nav">
+          <li class="p-0 mx-3">
+            <a href="index.html">Trang chủ</a>
+          </li>
+          <li class="p-0 mx-3">
+            <a href="sales.html">Khuyến mãi</a>
+          </li>
+          <li class="p-0 mx-3"><a href="cart.html">Giỏ hàng</a></li>
+          <li class="p-0 mx-3">
+            <a href="news.html">Tin tức</a>
+          </li>
+          <li class="p-0 mx-3">
+            <a href="warranty.html">Bảo hành</a>
+          </li>
+          <li class="p-0 mx-3">
+            <a href="contact.html">Liên hệ</a>
+          </li>
+        </ul>
+        <form action="/search.html" class="search d-flex d-lg-none">
+          <input type="text" name="search_inp" placeholder="Tìm kiếm" />
+          <button class="icon-search" type="submit">
+            <i class="material-icons">search</i>
+          </button>
+        </form>
+      </div>
     </nav>
     <main>
       <header>
         <a href="/"
-          ><img src="https://picsum.photos/70           " alt="" id="logo" />
+          ><img src="https://picsum.photos/70" alt="" id="logo" />
           <span>Mobile Store</span>
         </a>
-        <form action="/search" class="search">
-          <input type="text" placeholder="Tìm kiếm" />
+        <form action="/search.html" class="search d-none d-lg-flex">
+          <input type="text" name="search_inp" placeholder="Tìm kiếm" />
           <button class="icon-search" type="submit">
             <i class="material-icons">search</i>
           </button>
@@ -73,11 +108,60 @@
           </a>
         </div>
       </header>
+      <nav>
+        <ul>
+          <li class="p-0 mx-3">
+            <a href="/product.html?product=apple">
+              <i class="material-icons">apple</i>
+            </a>
+          </li>
+          <li class="p-0 mx-3">
+            <a href="/product.html?product=samsung">
+              <img
+                src="https://cdn.hoanghamobile.com/i/cat/Uploads/2020/11/30/samsung-logo-transparent.png"
+                alt="samsung-logo"
+              />
+            </a>
+          </li>
+          <li class="p-0 mx-3">
+            <a href="/product.html?product=xiaomi">
+              <img
+                src="https://cdn.hoanghamobile.com/i/cat/Uploads/2021/05/27/xiaomi-global-logo-rgb-logo-moi.png"
+                alt="xiaomi-logo"
+              />
+            </a>
+          </li>
+          <li class="p-0 mx-3">
+            <a href="/product.html?product=oppo">
+              <img
+                src="https://cdn.hoanghamobile.com/i/cat/Uploads/2020/09/14/brand%20(3).png"
+                alt="oppo-logo"
+              />
+            </a>
+          </li>
+          <li class="p-0 mx-3">
+            <a href="/product.html?product=vsmart">
+              <img
+                src="https://cdn.hoanghamobile.com/i/cat/Uploads/2020/09/14/brand%20(1).png"
+                alt="vsmart-logo"
+              />
+            </a>
+          </li>
+          <li class="p-0 mx-3">
+            <a href="/product.html?product=bphone">
+              <img
+                src="https://cdn.hoanghamobile.com/i/cat/Uploads/2020/11/30/logo-bphone.png"
+                alt="bphone-logo"
+              />
+            </a>
+          </li>
+        </ul>
+      </nav>
       <div class="container warranty">
         <div class="row">
           <!--Cột bên trái-->
           <div class="col-sm-3 pt-5">
-            <p style="font-size: 1.5rem; color: rgb(246, 250, 17)">
+            <p style="font-size: 1.5rem; color: #ffb213">
               <i class="fas fa-star"></i> Tips bảo vệ màn hình điện thoại:
             </p>
             <div id="carousel" class="carousel slide" data-ride="carousel">
@@ -132,7 +216,9 @@
             <div class="container-fluid">
               <fieldset>
                 <p style="text-align: center"><i class="fas fa-tools"></i></p>
-                <p class="p">Hãy nhập thông tin bảo hành vào box dưới đây</p>
+                <p class="p text-center">
+                  Hãy nhập thông tin bảo hành vào box dưới đây
+                </p>
                 <form
                   action="#"
                   class="frm"
@@ -140,7 +226,7 @@
                   method="get"
                   target="_self"
                 >
-                  <div class="form-group">
+                  <div class="form-group mx-5">
                     <label for="phone">Số điện thoại:</label>
                     <input
                       type="tel"
@@ -150,7 +236,7 @@
                       placeholder="Enter phone number"
                     />
                   </div>
-                  <div class="form-group">
+                  <div class="form-group mx-5">
                     <label for="code">Mã bảo hành:</label>
                     <input
                       type="text"
@@ -162,10 +248,10 @@
                   </div>
                   <button
                     type="submit"
-                    class="btn button btn-submit input"
+                    class="btn button btn-primary input d-block mx-auto"
                     id="submit"
                   >
-                    Submit
+                    Gửi thông tin
                   </button>
                 </form>
               </fieldset>
@@ -316,7 +402,7 @@
                           data-bs-dismiss="modal"
                           aria-label="submit"
                         >
-                          Sign-in
+                          Đăng ký
                         </button>
                       </div>
                     </div>

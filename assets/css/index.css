@@ -188,6 +188,9 @@ p {
 #connect a:hover {
   color: rgb(155, 152, 152);
 }
+button {
+  outline: none;
+}
 @media screen and (max-width: 1024px) {
   .search {
     width: 30%;

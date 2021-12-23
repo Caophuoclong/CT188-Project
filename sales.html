@@ -34,6 +34,7 @@
     />
 
     <link rel="stylesheet" href="./assets/css/index.css" />
+    <link rel="stylesheet" href="./assets/css/homepage.css" />
     <link rel="stylesheet" href="./assets/css/sales.css" />
 
     <title>Khuyến mãi</title>
@@ -46,31 +47,65 @@
     >
       <i class="material-icons" style="color: black">arrow_upward</i>
     </button>
-    <nav id="nav-mobile" class="py-1">
-      <ul class="d-flex justify-content-end list-unstyled">
-        <li class="p-0 mx-3">
-          <a href="index.html">Trang chủ</a>
-        </li>
-        <li class="p-0 mx-3">
-          <a href="sales.html">Khuyến mãi</a>
-        </li>
-        <li class="p-0 mx-3"><a href="cart.html">Giỏ hàng</a></li>
-        <li class="p-0 mx-3">
-          <a href="news.html">Tin tức</a>
-        </li>
-        <li class="p-0 mx-3">
-          <a href="contact.html">Liên hệ</a>
-        </li>
-      </ul>
+
+    <nav
+      id="nav-mobile"
+      class="navbar navbar-expand-lg navbar-inverse bg-inverse"
+      class="py-1"
+    >
+      <button
+        class="navbar-toggler"
+        type="button"
+        data-toggle="collapse"
+        data-target="#navbarSupportedContent"
+        aria-controls="navbarSupportedContent"
+        aria-expanded="false"
+        aria-label="Toggle navigation"
+      >
+        <i
+          class="fa fa-align-justify"
+          style="font-size: 2rem"
+          aria-hidden="true"
+        ></i>
+      </button>
+      <div
+        class="collapse navbar-collapse justify-content-end"
+        id="navbarSupportedContent"
+      >
+        <ul class="navbar-nav">
+          <li class="p-0 mx-3">
+            <a href="index.html">Trang chủ</a>
+          </li>
+          <li class="p-0 mx-3">
+            <a href="sales.html">Khuyến mãi</a>
+          </li>
+          <li class="p-0 mx-3"><a href="cart.html">Giỏ hàng</a></li>
+          <li class="p-0 mx-3">
+            <a href="news.html">Tin tức</a>
+          </li>
+          <li class="p-0 mx-3">
+            <a href="warranty.html">Bảo hành</a>
+          </li>
+          <li class="p-0 mx-3">
+            <a href="contact.html">Liên hệ</a>
+          </li>
+        </ul>
+        <form action="/search.html" class="search d-flex d-lg-none">
+          <input type="text" name="search_inp" placeholder="Tìm kiếm" />
+          <button class="icon-search" type="submit">
+            <i class="material-icons">search</i>
+          </button>
+        </form>
+      </div>
     </nav>
     <main>
       <header>
         <a href="/"
-          ><img src="https://picsum.photos/70           " alt="" id="logo" />
+          ><img src="https://picsum.photos/70" alt="" id="logo" />
           <span>Mobile Store</span>
         </a>
-        <form action="/search" class="search">
-          <input type="text" placeholder="Tìm kiếm" />
+        <form action="/search.html" class="search d-none d-lg-flex">
+          <input type="text" name="search_inp" placeholder="Tìm kiếm" />
           <button class="icon-search" type="submit">
             <i class="material-icons">search</i>
           </button>
@@ -83,7 +118,58 @@
           </a>
         </div>
       </header>
-
+      <nav>
+        <ul>
+          <li class="p-0 mx-3">
+            <a href="/product.html?product=apple">
+              <img
+                src="https://cdn.hoanghamobile.com/i/cat/Uploads/2021/01/19/loooooo.png"
+                alt="apple-logo"
+              />
+            </a>
+          </li>
+          <li class="p-0 mx-3">
+            <a href="/product.html?product=samsung">
+              <img
+                src="https://cdn.hoanghamobile.com/i/cat/Uploads/2020/11/30/samsung-logo-transparent.png"
+                alt="samsung-logo"
+              />
+            </a>
+          </li>
+          <li class="p-0 mx-3">
+            <a href="/product.html?product=xiaomi">
+              <img
+                src="https://cdn.hoanghamobile.com/i/cat/Uploads/2021/05/27/xiaomi-global-logo-rgb-logo-moi.png"
+                alt="xiaomi-logo"
+              />
+            </a>
+          </li>
+          <li class="p-0 mx-3">
+            <a href="/product.html?product=oppo">
+              <img
+                src="https://cdn.hoanghamobile.com/i/cat/Uploads/2020/09/14/brand%20(3).png"
+                alt="oppo-logo"
+              />
+            </a>
+          </li>
+          <li class="p-0 mx-3">
+            <a href="/product.html?product=vsmart">
+              <img
+                src="https://cdn.hoanghamobile.com/i/cat/Uploads/2020/09/14/brand%20(1).png"
+                alt="vsmart-logo"
+              />
+            </a>
+          </li>
+          <li class="p-0 mx-3">
+            <a href="/product.html?product=bphone">
+              <img
+                src="https://cdn.hoanghamobile.com/i/cat/Uploads/2020/11/30/logo-bphone.png"
+                alt="bphone-logo"
+              />
+            </a>
+          </li>
+        </ul>
+      </nav>
       <div>
         <img class="baner" src="./assets/images/sales/baner.png" alt="" />
       </div>
@@ -143,7 +229,24 @@
       </div>
 
       <div class="flash-sales"></div>
-
+      <h1 class="flash-sales-title text-left">10% Sales</h1>
+      <div
+        class="
+          10-sales
+          product
+          row
+          justify-content-lg-between justify-content-md-start
+        "
+      ></div>
+      <h1 class="flash-sales-title text-left">5% Sales</h1>
+      <div
+        class="
+          5-sales
+          product
+          row
+          justify-content-lg-between justify-content-md-start
+        "
+      ></div>
       <div>
         <img class="baner" src="./assets/images/sales/baner.png" alt="" />
       </div>
@@ -255,14 +358,9 @@
     ></script>
     <script
       type="text/javascript"
-<<<<<<< HEAD
       src="https://cdn.jsdelivr.net/npm/toastify-js"
     ></script>
-
-=======
-      src="https://code.jquery.com/jquery-migrate-1.2.1.min.js"
-    ></script>
->>>>>>> 55ca45672a8105ecb326a0f5fff0bda905c8390b
+    <script src="https://code.jquery.com/jquery-migrate-1.2.1.min.js"></script>
     <script
       src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js"
       integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q"
@@ -279,6 +377,6 @@
     ></script>
     <script src="./assets/js/product.js"></script>
     <script src="./assets/js/index.js"></script>
-    <script src="./assets/js/homepage.js"></script>
+    <script src="./assets/js/sales.js"></script>
   </body>
 </html>
