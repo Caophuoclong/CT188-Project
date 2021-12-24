@@ -136,8 +136,8 @@ function renderProduct(array, className, n) {
 		  <div class="btn-container">
 		  <button class="btn-item btn-add-to-cart" id="atc${item.id}" onclick="addToCart(${item.id})">
 		 	<i class="material-icons" >shopping_cart</i> 
-		  Add to cart</button>
-		  <button class="btn-item btn-add-to-cart" id="bn${item.id}" onclick="buyNow(${item.id})">Buy now</button>
+		  Thêm giỏ hàng</button>
+		  <button class="btn-item btn-add-to-cart" id="bn${item.id}" onclick="buyNow(${item.id})">Mua ngay</button>
 		  </div>	
         </div>
 		`)
@@ -167,8 +167,8 @@ function renderProductByBrand(array, brand, className, n) {
 		  <div class="btn-container">
 		  <button class="btn-item btn-add-to-cart" id="atc${item.id}" onclick="addToCart(${item.id})">
 		 	<i class="material-icons" >shopping_cart</i> 
-		  Add to cart</button>
-		  <button class="btn-item btn-add-to-cart" id="bn${item.id}" onclick="buyNow(${item.id})">Buy now</button>
+		  Thêm giỏ hàng</button>
+		  <button class="btn-item btn-add-to-cart" id="bn${item.id}" onclick="buyNow(${item.id})">Mua ngay</button>
 		  </div>	
         </div>
 		`)
