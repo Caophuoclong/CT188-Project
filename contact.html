@@ -4,7 +4,7 @@
     <meta charset="UTF-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <link rel="shortcut icon" href="./assets/images/shop.png">
+    <link rel="shortcut icon" href="./assets/images/shop.png" />
 
     <link
       rel="stylesheet"
@@ -28,20 +28,75 @@
       type="image/vnd.microsoft.icon"
       href="./assets/images/logo.jpg"
     />
+    <link
+      rel="stylesheet"
+      type="text/css"
+      href="https://cdn.jsdelivr.net/npm/toastify-js/src/toastify.min.css"
+    />
+
     <link rel="stylesheet" href="./assets/css/index.css" />
     <link rel="stylesheet" href="./assets/css/footer.css" />
     <link rel="stylesheet" href="./assets/css/contact.css" />
     <title>Liên hệ</title>
   </head>
-  <body>
-    <nav>
-      <ul id="nav-mobile" class="right hide-on-med-and-down">
-        <li><a href="index.html">Trang chủ</a></li>
-        <li><a href="sales.html">Khuyến mãi</a></li>
-        <li><a href="cart.html">Giỏ hàng</a></li>
-        <li><a href="warranty.html">Bảo hành</a></li>
-        <li><a href="contact.html">Liên hệ</a></li>
-      </ul>
+  <body id="top">
+    <button
+      onclick="scrollToTop()"
+      class="scroll-to-top"
+      style="font-size: 2rem"
+    >
+      <i class="material-icons" style="color: black">arrow_upward</i>
+    </button>
+
+    <nav
+      id="nav-mobile"
+      class="navbar navbar-expand-lg navbar-inverse bg-inverse"
+      class="py-1"
+    >
+      <button
+        class="navbar-toggler"
+        type="button"
+        data-toggle="collapse"
+        data-target="#navbarSupportedContent"
+        aria-controls="navbarSupportedContent"
+        aria-expanded="false"
+        aria-label="Toggle navigation"
+      >
+        <i
+          class="fa fa-align-justify"
+          style="font-size: 2rem"
+          aria-hidden="true"
+        ></i>
+      </button>
+      <div
+        class="collapse navbar-collapse justify-content-end"
+        id="navbarSupportedContent"
+      >
+        <ul class="navbar-nav">
+          <li class="p-0 mx-3">
+            <a href="index.html">Trang chủ</a>
+          </li>
+          <li class="p-0 mx-3">
+            <a href="sales.html">Khuyến mãi</a>
+          </li>
+          <li class="p-0 mx-3"><a href="cart.html">Giỏ hàng</a></li>
+          <li class="p-0 mx-3">
+            <a href="news.html">Tin tức</a>
+          </li>
+          <li class="p-0 mx-3">
+            <a href="warranty.html">Bảo hành</a>
+          </li>
+          <li class="p-0 mx-3">
+            <a href="contact.html">Liên hệ</a>
+          </li>
+        </ul>
+        <form action="/search.html" class="search d-flex d-lg-none">
+          <input type="text" name="search_inp" placeholder="Tìm kiếm" />
+          <button class="icon-search" type="submit">
+            <i class="material-icons">search</i>
+          </button>
+        </form>
+      </div>
     </nav>
     <main>
       <header>
@@ -49,167 +104,196 @@
           ><img src="https://picsum.photos/70           " alt="" id="logo" />
           <span>Mobile Store</span>
         </a>
-        <form action="/search" class="search">
-          <input type="text" placeholder="Tìm kiếm" />
+        <form action="/search.html" class="search d-none d-lg-flex">
+          <input type="text" name="search_inp" placeholder="Tìm kiếm" />
           <button class="icon-search" type="submit">
             <i class="material-icons">search</i>
           </button>
         </form>
         <div>
-          <a href="cart.html" class="">
+          <a href="cart.html" class="cart">
             <i class="material-icons" style="color: black">shopping_cart</i>
+            <span id="quantity" class="quantity">0</span>
             <span>Giỏ hàng</span>
           </a>
         </div>
       </header>
-      <div class="contact">
-        <h1>LIÊN HỆ CHO CHÚNG TÔI</h1>
-        <form
-          action="#"
-          method="post"
-          id="signup-form"
-          enctype="application/x-www-form-urlencoded"
-          onsubmit="return lienhe(this);"
-        >
-          <ul>
-            <li>
-              <input
-                type="text"
-                name="hoten"
-                id="hoten"
-                minlength="4"
-                placeholder="Họ tên*"
-              />
-            </li>
-            <li>
-              <input
-                type="text"
-                name="email"
-                id="email"
-                onkeydown="validation()"
-                placeholder="Email*"
-              />
-            </li>
-            <li>
-              <input
-                type="text"
-                name="sdt"
-                id="sdt"
-                onkeydown="validation()"
-                placeholder="Số điện thoại*"
-              />
-            </li>
-            <li>
-              <input
-                type="text"
-                name="sdt"
-                id="sdt"
-                onkeydown="validation()"
-                placeholder="Chủ đề"
-              />
-            </li>
-            <li>
-              <textarea
-                name="content"
-                id="content"
-                cols="50"
-                rows="7"
-                minlength="10"
-                placeholder="Nội dung cần liên hệ*"
-              ></textarea>
-            </li>
-            <li>
-              <input type="submit" value="GỬI LIÊN HỆ" />
-            </li>
-          </ul>
-        </form>
+      <div class="container">
+        <div class="row justify-content-md-center">
+          <div class="col col-lg-5" id="myForm">
+            <h1 class="text-center mt-4 mb-4">LIÊN HỆ CHO CHÚNG TÔI</h1>
+            <form
+              action="#"
+              method="get"
+              id="form-contact"
+              enctype="application/x-www-form-urlencoded"
+            >
+              <div class="form-group">
+                <input
+                  class="form-control"
+                  type="text"
+                  name="hoten"
+                  id="hoten"
+                  placeholder="Họ tên*"
+                  onchange="testName()"
+                />
+                <p id="errorName"></p>
+              </div>
+              <div class="form-group">
+                <input
+                  class="form-control"
+                  type="text"
+                  name="email"
+                  id="email"
+                  placeholder="Email*"
+                  onchange="testEmail()"
+                />
+                <p id="errorEmail"></p>
+              </div>
+              <div class="form-group">
+                <input
+                  class="form-control"
+                  type="text"
+                  name="sdt"
+                  id="sdt"
+                  placeholder="Số điện thoại*"
+                  onchange="testPhone()"
+                />
+                <p id="errorPhone"></p>
+              </div>
+              <div class="form-group">
+                <input
+                  class="form-control"
+                  type="text"
+                  name="sdt"
+                  id="sdt"
+                  placeholder="Chủ đề"
+                />
+              </div>
+              <div class="form-group">
+                <textarea
+                  name="content"
+                  id="content"
+                  placeholder="Nội dung cần liên hệ*"
+                  class="form-control"
+                  onchange="testContent()"
+                ></textarea>
+                <span id="errorContent"></span>
+              </div>
+              <div class="form-group">
+                <input class="form-control" type="submit" value="GỬI LIÊN HỆ" />
+              </div>
+            </form>
+          </div>
+
+          <div class="col col-lg-5">
+            <iframe
+              src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3928.8414543437184!2d105.76842661401852!3d10.029938975271905!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x31a0895a51d60719%3A0x9d76b0035f6d53d0!2zxJDhuqFpIGjhu41jIEPhuqduIFRoxqE!5e0!3m2!1svi!2s!4v1638611231454!5m2!1svi!2s"
+              width="600"
+              height="450"
+              style="border: 0"
+              allowfullscreen=""
+              loading="lazy"
+            ></iframe>
+          </div>
+        </div>
       </div>
     </main>
     <footer>
-      <div class="content1">
-        <div>
-          <h1>Về Mobile Store</h1>
-          <a href="" class="text-dark">Giới thiệu về Mobile Store</a>
-          <a href="" class="text-dark">Chính sách bảo mật thanh toán</a>
-          <a href="" class="text-dark">Chính sách bảo mật thông tin cá nhân</a>
-          <p>Hotline: 1900-0000</p>
-        </div>
-        <div>
-          <h1>Hỗ trợ khách hàng</h1>
-          <a href="" class="text-dark">Giải quyết khiếu nại</a>
-          <a href="" class="text-dark">Hướng dẫn đặt hàng</a>
-          <a href="" class="text-dark">Chính sách đổi trả</a>
-          <p class="">Hỗ trợ khách hàng: hotro@mobilestore.vn</p>
-        </div>
-        <div class="connect">
-          <h1>Kết nối với chúng tôi</h1>
-          <a href="" class="text-dark"
-            ><i class="fab fa-facebook text-info fa-2x fb"></i>Facebook</a
-          >
-          <a href="" class="text-dark"
-            ><i class="fab fa-pinterest text-danger fa-2x pint"></i>Pinterest</a
-          >
-          <a href="" class="text-dark"
-            ><i class="fab fa-twitter twitter text-info fa-2x tw"></i>Twitter</a
-          >
-          <a href="" class="text-dark"
-            ><i class="fab fa-google-plus-g text-danger fa-2x gg"></i>Google+</a
-          >
+      <div class="container my-4" id="connect">
+        <div class="row">
+          <div class="col fs">
+            <h1>Về Mobile Store</h1>
+            <a href="">Giới thiệu về Mobile Store</a>
+            <a href="">Chính sách bảo mật thanh toán</a>
+            <a href="">Chính sách bảo mật thông tin cá nhân</a>
+            <a href="tel:1900-0000">Hotline: 1900-0000</a>
+          </div>
+          <div class="col fs">
+            <h1>Hỗ trợ khách hàng</h1>
+            <a href="">Giải quyết khiếu nại</a>
+            <a href="">Hướng dẫn đặt hàng</a>
+            <a href="">Chính sách đổi trả</a>
+            <a href="mailto:hotro@mobilestore.vn"
+              >Hỗ trợ khách hàng: hotro@mobilestore.vn</a
+            >
+          </div>
+          <div class="col fs">
+            <h1>Kết nối với chúng tôi</h1>
+            <a href=""
+              ><i class="fab fa-facebook text-info fa-2x fb mb-3"></i
+              >Facebook</a
+            >
+            <a href=""
+              ><i class="fab fa-pinterest text-danger fa-2x pint mb-3"></i
+              >Pinterest</a
+            >
+            <a href=""
+              ><i class="fab fa-twitter twitter text-info fa-2x tw mb-3"></i
+              >Twitter</a
+            >
+            <a href=""
+              ><i class="fab fa-google-plus-g text-danger fa-2x gg"></i
+              >Google+</a
+            >
+          </div>
         </div>
       </div>
-      <div class="content2">
-        <div>
-          <h1>Cách thức thanh toán</h1>
-          <img
-            src="./assets/images/jcb.jfif"
-            alt=""
-            width="50px"
-            class="image"
-          />
-          <img
-            src="./assets/images/momo.png"
-            alt=""
-            width="50px"
-            class="image"
-          />
-          <img
-            src="./assets/images/visa.png"
-            alt=""
-            width="50px"
-            class="image"
-          />
-          <img
-            src="./assets/images/zalopay.jfif"
-            alt=""
-            width="50px"
-            class="image"
-          />
-          <img
-            src="./assets/images/napas.png"
-            alt=""
-            width="50px"
-            class="image"
-          />
-        </div>
-        <div>
-          <h1>Chứng nhận</h1>
-          <img
-            src="./assets/images/dkbct.png"
-            alt=""
-            width="100px"
-            class="image"
-          />
-          <img
-            src="./assets/images/tbbct.png"
-            alt=""
-            width="100px"
-            class="image"
-          />
+      <div class="container">
+        <div class="row justify-content-md-center">
+          <div class="col col-lg6">
+            <h1>Cách thức thanh toán</h1>
+            <img
+              src="./assets/images/jcb.jfif"
+              alt=""
+              width="50px"
+              class="m-3"
+            />
+            <img
+              src="./assets/images/momo.png"
+              alt=""
+              width="50px"
+              class="m-3"
+            />
+            <img
+              src="./assets/images/visa.png"
+              alt=""
+              width="50px"
+              class="m-3"
+            />
+            <img
+              src="./assets/images/zalopay.jfif"
+              alt=""
+              width="50px"
+              class="m-3"
+            />
+            <img
+              src="./assets/images/napas.png"
+              alt=""
+              width="50px"
+              class="m-3"
+            />
+          </div>
+          <div class="col col-lg-4">
+            <h1>Chứng nhận</h1>
+            <img
+              src="./assets/images/dkbct.png"
+              alt=""
+              width="100px"
+              class="m-3"
+            />
+            <img
+              src="./assets/images/tbbct.png"
+              alt=""
+              width="100px"
+              class="m-3"
+            />
+          </div>
         </div>
       </div>
       <div class="content3">
         <p>
-          Mobile Store địa chỉ: 999, Toà nhà Diamond, Đường Nguyễn Huệ, Quận 1
+          Mobile Store địa chỉ: Khu II, Đ. 3/2, Xuân Khánh, Ninh Kiều, Cần Thơ
         </p>
       </div>
     </footer>
@@ -218,6 +302,11 @@
       integrity="sha256-H+K7U5CnXl1h5ywQfKtSj8PCmoN9aaq30gDh27Xc0jk="
       crossorigin="anonymous"
     ></script>
+    <script
+      type="text/javascript"
+      src="https://cdn.jsdelivr.net/npm/toastify-js"
+    ></script>
+
     <script
       src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js"
       integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q"
@@ -229,5 +318,6 @@
       crossorigin="anonymous"
     ></script>
     <script src="./assets/js/index.js"></script>
+    <script src="./assets/js/contact.js"></script>
   </body>
 </html>

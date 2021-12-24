@@ -2,10 +2,10 @@
 html,
 body {
   min-height: 100%;
-
   padding: 0;
   background-color: #fff;
   font-size: 62.5%;
+  min-width: 75rem;
 }
 body {
   height: 100vh;
@@ -36,30 +36,14 @@ select:focus {
   outline: none;
 }
 body > nav {
-  padding: 0.5rem;
   background-color: #ffb213;
-  min-height: 1%;
-  top: 0;
   z-index: 5;
 }
-nav > * {
-  margin: 0px;
-}
-nav ul {
-  margin: 0px;
-  display: flex;
-  justify-content: flex-end;
-}
 nav ul > li {
-  margin: 0;
-  padding: 0;
-  list-style: none;
-  margin: 0px 1rem;
   font-size: 1.5rem;
 }
 footer {
   background-color: #ffb213;
-  height: 4%;
   padding: 0.5rem;
 }
 main {
@@ -67,7 +51,6 @@ main {
   margin: 0.5rem auto;
   min-height: 92%;
   padding: 2rem;
-  /* background-color: #20230140; */
 }
 header {
   display: flex;
@@ -93,10 +76,7 @@ a span {
   margin: 0.5rem;
   border-radius: 45%;
 }
-form {
-  display: flex;
-  justify-content: space-between;
-}
+
 .search {
   display: flex;
   position: relative;
@@ -173,14 +153,43 @@ ul li {
   right: 10;
   transform: translateX(60%);
 }
-.old-price {
+.content1 {
+  display: flex;
+  justify-content: space-around;
+
   font-size: 1.5rem;
-  text-decoration: line-through;
-  color: rgb(165, 162, 162);
+  margin-top: 2rem;
 }
-.new-price {
+.fb,
+.pint,
+.tw,
+.gg {
+  margin-right: 1.5rem;
+}
+
+.content2 {
+  margin: 2rem;
+  display: flex;
+  justify-content: space-between;
+  padding: 0 5rem;
+}
+.image {
+  margin: 1rem;
+}
+.connect a {
+  text-decoration: none;
+  margin-left: 5rem;
+  margin-bottom: 1rem;
+}
+.fs > a,
+p {
   font-size: 1.5rem;
-  color: #ff1313;
+}
+#connect a:hover {
+  color: rgb(155, 152, 152);
+}
+button {
+  outline: none;
 }
 @media screen and (max-width: 1024px) {
   .search {

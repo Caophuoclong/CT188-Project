@@ -4,8 +4,14 @@
     <meta charset="UTF-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <link rel="shortcut icon" href="./assets/images/shop.png">
-
+    <link rel="shortcut icon" href="./assets/images/shop.png" />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta2/css/all.min.css"
+      integrity="sha512-YWzhKL2whUzgiheMoBFwW8CKV4qpHQAEuvilg9FAn5VJUDwKZZxkJNuGM4XkWuk94WCrrwslk8yWNGmY1EduTA=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    />
     <link
       href="https://fonts.googleapis.com/icon?family=Material+Icons"
       rel="stylesheet"
@@ -21,9 +27,15 @@
       integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm"
       crossorigin="anonymous"
     />
+    <link
+      rel="stylesheet"
+      type="text/css"
+      href="https://cdn.jsdelivr.net/npm/toastify-js/src/toastify.min.css"
+    />
+
     <link rel="stylesheet" href="./assets/css/index.css" />
     <link rel="stylesheet" href="./assets/css/homepage.css" />
-
+    <link rel="stylesheet" href="./assets/css/contact.css" />
     <title>Trang chủ</title>
   </head>
   <body id="top">
@@ -34,23 +46,65 @@
     >
       <i class="material-icons" style="color: black">arrow_upward</i>
     </button>
-    <nav id="nav-mobile">
-      <ul class="">
-        <li><a href="index.html">Trang chủ</a></li>
-        <li><a href="sales.html">Khuyến mãi</a></li>
-        <li><a href="cart.html">Giỏ hàng</a></li>
-        <li><a href="warranty.html">Bảo hành</a></li>
-        <li><a href="contact.html">Liên hệ</a></li>
-      </ul>
+
+    <nav
+      id="nav-mobile"
+      class="navbar navbar-expand-lg navbar-inverse bg-inverse"
+      class="py-1"
+    >
+      <button
+        class="navbar-toggler"
+        type="button"
+        data-toggle="collapse"
+        data-target="#navbarSupportedContent"
+        aria-controls="navbarSupportedContent"
+        aria-expanded="false"
+        aria-label="Toggle navigation"
+      >
+        <i
+          class="fa fa-align-justify"
+          style="font-size: 2rem"
+          aria-hidden="true"
+        ></i>
+      </button>
+      <div
+        class="collapse navbar-collapse justify-content-end"
+        id="navbarSupportedContent"
+      >
+        <ul class="navbar-nav">
+          <li class="p-0 mx-3">
+            <a href="index.html">Trang chủ</a>
+          </li>
+          <li class="p-0 mx-3">
+            <a href="sales.html">Khuyến mãi</a>
+          </li>
+          <li class="p-0 mx-3"><a href="cart.html">Giỏ hàng</a></li>
+          <li class="p-0 mx-3">
+            <a href="news.html">Tin tức</a>
+          </li>
+          <li class="p-0 mx-3">
+            <a href="warranty.html">Bảo hành</a>
+          </li>
+          <li class="p-0 mx-3">
+            <a href="contact.html">Liên hệ</a>
+          </li>
+        </ul>
+        <form action="/search.html" class="search d-flex d-lg-none">
+          <input type="text" name="search_inp" placeholder="Tìm kiếm" />
+          <button class="icon-search" type="submit">
+            <i class="material-icons">search</i>
+          </button>
+        </form>
+      </div>
     </nav>
-    <main>
+    <main class="">
       <header>
         <a href="/"
-          ><img src="https://picsum.photos/70           " alt="" id="logo" />
+          ><img src="https://picsum.photos/70" alt="" id="logo" />
           <span>Mobile Store</span>
         </a>
-        <form action="/search" class="search">
-          <input type="text" placeholder="Tìm kiếm" />
+        <form action="/search.html" class="search d-none d-lg-flex">
+          <input type="text" name="search_inp" placeholder="Tìm kiếm" />
           <button class="icon-search" type="submit">
             <i class="material-icons">search</i>
           </button>
@@ -65,49 +119,51 @@
       </header>
       <nav>
         <ul>
-          <li>
-            <a href="#">
-              <i class="material-icons">apple</i>
-              Apple
+          <li class="p-0 mx-3">
+            <a href="/product.html?product=apple">
+              <img
+                src="https://cdn.hoanghamobile.com/i/cat/Uploads/2021/01/19/loooooo.png"
+                alt="apple-logo"
+              />
             </a>
           </li>
-          <li>
-            <a href="#">
+          <li class="p-0 mx-3">
+            <a href="/product.html?product=samsung">
               <img
                 src="https://cdn.hoanghamobile.com/i/cat/Uploads/2020/11/30/samsung-logo-transparent.png"
                 alt="samsung-logo"
               />
             </a>
           </li>
-          <li>
-            <a href="#">
+          <li class="p-0 mx-3">
+            <a href="/product.html?product=xiaomi">
               <img
                 src="https://cdn.hoanghamobile.com/i/cat/Uploads/2021/05/27/xiaomi-global-logo-rgb-logo-moi.png"
                 alt="xiaomi-logo"
               />
             </a>
           </li>
-          <li>
-            <a href="#">
+          <li class="p-0 mx-3">
+            <a href="/product.html?product=oppo">
               <img
                 src="https://cdn.hoanghamobile.com/i/cat/Uploads/2020/09/14/brand%20(3).png"
                 alt="oppo-logo"
               />
             </a>
           </li>
-          <li>
-            <a href="#">
+          <li class="p-0 mx-3">
+            <a href="/product.html?product=vsmart">
               <img
                 src="https://cdn.hoanghamobile.com/i/cat/Uploads/2020/09/14/brand%20(1).png"
                 alt="vsmart-logo"
               />
             </a>
           </li>
-          <li>
-            <a href="#">
+          <li class="p-0 mx-3">
+            <a href="/product.html?product=vivo">
               <img
-                src="https://cdn.hoanghamobile.com/i/cat/Uploads/2020/11/30/logo-bphone.png"
-                alt="bphone-logo"
+                src="https://cdn.hoanghamobile.com/i/cat/Uploads/2020/11/30/vivo-logo.png"
+                alt="vivo-logo"
               />
             </a>
           </li>
@@ -128,100 +184,125 @@
         <i class="material-icons" style="color: black">flash_on</i>
         FLASH SALES
       </div>
-      <div class="flash-sales">
-        <div class="flash-sales-items">
-          <img
-            src="https://images.unsplash.com/photo-1593642633279-1796119d5482?ixlib=rb-1.2.1&ixid=MnwxMjA3fDF8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=688&q=80"
-            alt=""
-          />
-          <div class="title">This is sales</div>
-          <div class="price">
-            <p class="old-price">15.000.000</p>
-            <p class="new-price">8.900.000</p>
+      <div class="flash-sales"></div>
+      <div
+        class="product row justify-content-lg-between justify-content-md-start"
+      ></div>
+      <button
+        onclick="readMore()"
+        id="readmore"
+        class="
+          d-block
+          h1
+          text-center
+          mx-auto
+          my-4
+          border-0
+          outline-0
+          btn btn-primary
+        "
+      >
+        Xem them
+      </button>
+    </main>
+    <footer>
+      <div class="container my-4" id="connect">
+        <div class="row">
+          <div class="col fs">
+            <h1>Về Mobile Store</h1>
+            <a href="">Giới thiệu về Mobile Store</a>
+            <a href="">Chính sách bảo mật thanh toán</a>
+            <a href="">Chính sách bảo mật thông tin cá nhân</a>
+            <a href="tel:1900-0000">Hotline: 1900-0000</a>
           </div>
-        </div>
-
-        <div class="flash-sales-items">
-          <img
-            src="https://images.unsplash.com/photo-1519389950473-47ba0277781c?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxzZWFyY2h8NXx8dGVjaHxlbnwwfHwwfHw%3D&auto=format&fit=crop&w=500&q=60"
-            alt=""
-          />
-          <div class="title">This is sales</div>
-          <div class="price">
-            <p class="old-price">15.000.000</p>
-            <p class="new-price">8.900.000</p>
+          <div class="col fs">
+            <h1>Hỗ trợ khách hàng</h1>
+            <a href="">Giải quyết khiếu nại</a>
+            <a href="">Hướng dẫn đặt hàng</a>
+            <a href="">Chính sách đổi trả</a>
+            <a href="mailto:hotro@mobilestore.vn"
+              >Hỗ trợ khách hàng: hotro@mobilestore.vn</a
+            >
           </div>
-        </div>
-        <div class="flash-sales-items">
-          <img
-            src="https://images.unsplash.com/photo-1488590528505-98d2b5aba04b?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxzZWFyY2h8NHx8dGVjaHxlbnwwfHwwfHw%3D&auto=format&fit=crop&w=500&q=60"
-            alt=""
-          />
-          <div class="title">This is sales</div>
-          <div class="price">
-            <p class="old-price">15.000.000</p>
-            <p class="new-price">8.900.000</p>
-          </div>
-        </div>
-        <div class="flash-sales-items">
-          <img
-            src="https://images.unsplash.com/photo-1518770660439-4636190af475?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1470&q=80"
-            alt=""
-          />
-          <div class="title">This is sales</div>
-          <div class="price">
-            <p class="old-price">15.000.000</p>
-            <p class="new-price">8.900.000</p>
-          </div>
-        </div>
-        <div class="flash-sales-items">
-          <img
-            src="https://images.unsplash.com/photo-1539683255143-73a6b838b106?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=685&q=80"
-            alt=""
-          />
-          <div class="title">This is sales</div>
-          <div class="price">
-            <p class="old-price">15.000.000</p>
-            <p class="new-price">8.900.000</p>
-          </div>
-        </div>
-        <div class="flash-sales-items">
-          <img
-            src="https://images.unsplash.com/photo-1518770660439-4636190af475?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1470&q=80"
-            alt=""
-          />
-          <div class="title">This is sales</div>
-          <div class="price">
-            <p class="old-price">15.000.000</p>
-            <p class="new-price">8.900.000</p>
-          </div>
-        </div>
-        <div class="flash-sales-items">
-          <img
-            src="https://images.unsplash.com/photo-1518770660439-4636190af475?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1470&q=80"
-            alt=""
-          />
-          <div class="title">This is sales</div>
-          <div class="price">
-            <p class="old-price">15.000.000</p>
-            <p class="new-price">8.900.000</p>
-          </div>
-        </div>
-        <div class="flash-sales-items">
-          <img
-            src="https://images.unsplash.com/photo-1518770660439-4636190af475?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1470&q=80"
-            alt=""
-          />
-          <div class="title">This is sales</div>
-          <div class="price">
-            <p class="old-price">15.000.000</p>
-            <p class="new-price">8.900.000</p>
+          <div class="col fs">
+            <h1>Kết nối với chúng tôi</h1>
+            <a href=""
+              ><i class="fab fa-facebook text-info fa-2x fb mb-3"></i
+              >Facebook</a
+            >
+            <a href=""
+              ><i class="fab fa-pinterest text-danger fa-2x pint mb-3"></i
+              >Pinterest</a
+            >
+            <a href=""
+              ><i class="fab fa-twitter twitter text-info fa-2x tw mb-3"></i
+              >Twitter</a
+            >
+            <a href=""
+              ><i class="fab fa-google-plus-g text-danger fa-2x gg"></i
+              >Google+</a
+            >
           </div>
         </div>
       </div>
-      <div class="product"></div>
-    </main>
-    <footer></footer>
+      <div class="container">
+        <div class="row justify-content-md-center">
+          <div class="col col-lg6">
+            <h1>Cách thức thanh toán</h1>
+            <img
+              src="./assets/images/jcb.jfif"
+              alt=""
+              width="50px"
+              class="m-3"
+            />
+            <img
+              src="./assets/images/momo.png"
+              alt=""
+              width="50px"
+              class="m-3"
+            />
+            <img
+              src="./assets/images/visa.png"
+              alt=""
+              width="50px"
+              class="m-3"
+            />
+            <img
+              src="./assets/images/zalopay.jfif"
+              alt=""
+              width="50px"
+              class="m-3"
+            />
+            <img
+              src="./assets/images/napas.png"
+              alt=""
+              width="50px"
+              class="m-3"
+            />
+          </div>
+          <div class="col col-lg-4">
+            <h1>Chứng nhận</h1>
+            <img
+              src="./assets/images/dkbct.png"
+              alt=""
+              width="100px"
+              class="m-3"
+            />
+            <img
+              src="./assets/images/tbbct.png"
+              alt=""
+              width="100px"
+              class="m-3"
+            />
+          </div>
+        </div>
+      </div>
+      <div class="content3">
+        <p>
+          Mobile Store địa chỉ: Khu II, Đ. 3/2, Xuân Khánh, Ninh Kiều, Cần Thơ
+        </p>
+      </div>
+    </footer>
     <script
       src="https://code.jquery.com/jquery-3.6.0.js"
       integrity="sha256-H+K7U5CnXl1h5ywQfKtSj8PCmoN9aaq30gDh27Xc0jk="
@@ -231,6 +312,11 @@
       type="text/javascript"
       src="https://code.jquery.com/jquery-migrate-1.2.1.min.js"
     ></script>
+    <script
+      type="text/javascript"
+      src="https://cdn.jsdelivr.net/npm/toastify-js"
+    ></script>
+
     <script
       src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js"
       integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q"
@@ -245,6 +331,7 @@
       type="text/javascript"
       src="https://cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.min.js"
     ></script>
+    <script src="./assets/js/product.js"></script>
     <script src="./assets/js/index.js"></script>
     <script src="./assets/js/homepage.js"></script>
   </body>

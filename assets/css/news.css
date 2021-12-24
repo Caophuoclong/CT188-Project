@@ -1,0 +1,301 @@
+*{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+body{
+    font-weight: 700;
+}
+.sticky{
+    background-color: #ffb213;
+    position: fixed;
+    left: 0;
+    padding: 0.5rem;
+    z-index: 5;
+}
+.post-slider{
+    aspect-ratio: 2/1;
+    margin-bottom: 5rem;
+}
+.post-slider .post-item{
+    position: relative;
+    width: 100%;
+    height: 100%;
+}
+.post-slider .post-item img{
+    width: 100%;
+    height: 100%;
+}
+.post-slider .post-item a{
+    position: absolute;
+    left: 5%;
+    right: 5%;
+    bottom: 5%;
+    font-size: 4.8rem;
+    color: #fff;
+    font-weight: 350;
+}
+.slide-nav{
+    height: 15.6rem;
+    padding: 0 4rem;
+    margin-bottom: 4.7rem;
+}
+.slide-nav .post-item{
+    height: 15rem;
+    margin: 0 0.5rem;
+}
+.slide-nav .post-item img{
+    width: 100%;
+    height: 15rem;
+}
+.slide-nav .slick-arrow{
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    background-color: #ffb213;
+    transition: all 0.2s linear;
+    color: #000;
+    border: none;
+    border-radius: 100%;
+    z-index: 2;
+    width: 2rem;
+    height: 2rem;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 1.3rem;
+    line-height: 1;
+}
+.slide-nav .slick-arrow:hover{
+    background-color: #fff;
+}
+.slide-nav .slick-prev{
+    left: 1%;
+}
+.slide-nav .slick-next{
+    right: 1%;
+}
+.slide-nav .slick-dots{
+    position: absolute;
+    bottom: 0;
+    left: 50%;
+    transform: translate(-50%,2rem);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 0 3rem;
+}
+.slide-nav .slick-dots button{
+    font-size: 0;
+    width: 0.8rem;
+    height: 0.8rem;
+    border: none;
+    outline: none;
+    border-radius: 100%;
+    transition: all 0.2s linear;
+}
+.slide-nav .slick-dots .slick-active button{
+    background-color: #ffb213;
+}
+.news-container .news-item{
+    display: flex;
+    justify-content: space-between;
+    padding-bottom:  4rem;
+}
+.news-container .news-item .image{
+    flex-basis: 40%;
+}
+.news-container .news-item img{
+    width: 100%;
+    aspect-ratio: 15/10;
+}
+.news-container .news-item .detail{
+    flex-basis: 53%;
+}
+.news-container .news-item .detail a{
+    color: #000;
+    font-size: 2.5rem;
+    margin-bottom: 1rem;
+    display: -webkit-box;
+    max-height: 5.8rem;
+    -webkit-box-orient: vertical;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    white-space: normal;
+    -webkit-line-clamp: 2;
+    line-height: 2.9rem;
+}
+.news-container .news-item .detail p{
+    color: #777;
+    font-size: 1.8rem;
+    font-weight: 200;
+    display: -webkit-box;
+    max-height: 6.6rem;
+    -webkit-box-orient: vertical;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    white-space: normal;
+    -webkit-line-clamp: 3;
+    line-height: 2.2rem;
+}
+.social-container{
+    margin-bottom: 4.7rem;
+}
+.social-container .title{
+    height: 3rem;
+    border-bottom: 0.2rem solid #ffb213;
+    margin-bottom: 2.6rem;
+}
+.social-container .title span{
+    line-height: 3rem;
+    font-size: 1.5rem;
+    background-color: #ffb213;
+    color: black;
+    padding: 0.3rem 0.5rem;
+}
+.social-list{
+    display: flex;
+    justify-content: space-between;
+}
+.social-box{
+    flex-basis: 30%;
+    aspect-ratio: 1/1;
+    text-align: center;
+}
+.social-box.fb{
+    background-color: #516eab;
+}
+.social-box.in{
+    background-color: #417096;
+}
+.social-box.yt{
+    background-color: #e14e42;
+}
+.social-box a{
+    width: 100%;
+    height: 100%;
+    display: block;
+}
+.social-box a:hover{
+    background-color: #000;
+}
+.social-box .icon,.counter,.name{
+    display: block;
+}
+.social-box .icon{
+    color: #fff;
+    font-size: 3.2rem;
+    padding-top: 1rem;
+}
+.social-box .counter{
+    font-size: 2.1rem;
+    color: #fff;
+}
+.social-box .name{
+    font-size: 1.2rem;
+    color: #fff;
+}
+.hotnews-container .title{
+    height: 3rem;
+    border-bottom: 0.2rem solid #ffb213;
+    margin-bottom: 2.6rem;
+}
+.hotnews-container .title span{
+    line-height: 3rem;
+    font-size: 1.5rem;
+    background-color: #ffb213;
+    color: black;
+    padding: 0.3rem 0.5rem;
+}
+.hotnews-container .news-item{
+    display: flex;
+    justify-content: space-between;
+    padding-bottom:  2.6rem;
+}
+.hotnews-container .news-item .image{
+    flex-basis: 40%;
+}
+.hotnews-container .news-item img{
+    width: 100%;
+    aspect-ratio: 15/10;
+}
+.hotnews-container .news-item .detail{
+    flex-basis: 53%;
+}
+.hotnews-container .news-item .detail a{
+    color: #000;
+    font-size: 1.2rem;
+    margin-bottom: 1rem;
+    display: -webkit-box;
+    max-height: 3.2rem;
+    -webkit-box-orient: vertical;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    white-space: normal;
+    -webkit-line-clamp: 2;
+    line-height: 1.6rem;
+}
+.hotnews-container .news-item .detail p{
+    color: #777;
+    font-size: 0.8rem;
+    display: -webkit-box;
+    max-height: 3.6rem;
+    -webkit-box-orient: vertical;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    white-space: normal;
+    -webkit-line-clamp: 3;
+    line-height: 1.2rem;
+}
+@media screen and (max-width: 576px) {
+    body > nav{
+        display: none;
+    }
+    body > main{
+        width: 100%;
+        padding: 0 1.5rem;
+    }
+    body > main > header{
+        display: none;
+    }
+    .post-slider .post-item a{
+        position: absolute;
+        left: 5%;
+        right: 5%;
+        bottom: 5%;
+        font-size: 1.2rem;
+        color: #fff;
+        font-weight: 700;
+    }
+    .slide-nav{
+        display: none;
+    }
+    .news-container .news-item{
+        padding-bottom:  2.6rem;
+    }
+    .news-container .news-item .detail a{
+        color: #000;
+        font-size: 1.2rem;
+        margin-bottom: 1rem;
+        display: -webkit-box;
+        max-height: 3.2rem;
+        -webkit-box-orient: vertical;
+        overflow: hidden;
+        text-overflow: ellipsis;
+        white-space: normal;
+        -webkit-line-clamp: 2;
+        line-height: 1.6rem;
+    }
+    .news-container .news-item .detail p{
+        color: #777;
+        font-size: 0.8rem;
+        display: -webkit-box;
+        max-height: 3.6rem;
+        -webkit-box-orient: vertical;
+        overflow: hidden;
+        text-overflow: ellipsis;
+        white-space: normal;
+        -webkit-line-clamp: 3;
+        line-height: 1.2rem;
+    }
+}

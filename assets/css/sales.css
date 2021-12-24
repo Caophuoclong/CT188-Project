@@ -1,38 +1,33 @@
-main nav {
-  padding: 0.5rem;
-  border-radius: 1rem;
-  margin: 0.5rem 0;
+.baner {
+  width: 100%;
+  border-radius: 1.5rem;
+  margin: 0.5rem;
+}
+.baner_sale {
+  background-image: url(https://cdn.tgdd.vn/mwgcart/mwg-site/ContentMwg/images/noel/Tagline/TGDD/tagline_desktop.png);
+  background-size: 100%;
+  border-radius: 1.5rem;
+  padding: 1em;
+  color: white;
+  margin: 4em 0;
+}
+h1 {
   position: relative;
-  background-color: #ffb213;
-}
-main nav ul {
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-  font-size: 1.5rem;
-  margin: 0rem;
-  padding: 0rem 2rem;
-}
-main nav ul li {
-  display: flex;
-  align-items: center;
+  text-align: center;
+  z-index: 0;
 }
 .slide-container {
   width: 100%;
   border-radius: 1.5rem;
-  margin: 2rem 0.5rem;
-  margin-bottom: 5rem;
-  padding: 1rem 0;
 }
 .slide-item {
   width: 100%;
   border-radius: 1.5rem;
-  margin-bottom: 5rem;
   margin: 0.5rem;
 }
 .slide-item > img {
   width: 100%;
-  height: 30rem;
+  height: 45em;
   border-radius: 1.5rem;
 }
 .slick-arrow {
@@ -78,7 +73,7 @@ main nav ul li {
   gap: 0 2rem;
 }
 .slick-dots button {
-  font-size: 0;
+  font-size: 2em;
   width: 2rem;
   height: 2rem;
   border-radius: 100rem;
@@ -86,11 +81,9 @@ main nav ul li {
   border: none;
   background-color: rgb(160, 160, 160);
 }
-
 .slick-dots .slick-active button {
   background-color: #ffb213;
 }
-
 .flash-sales {
   width: 100%;
   border-radius: 1.5rem;
@@ -122,7 +115,6 @@ main nav ul li {
   color: #ffb213 !important;
   font-size: 3rem;
 }
-
 .flash-sales-items img {
   height: 70%;
   width: 90%;
@@ -130,14 +122,12 @@ main nav ul li {
   border-radius: 8px;
   border-radius: 2rem;
 }
-
 .flash-sales button {
   position: absolute;
   top: 50%;
   transform: translateY(-50%, 100%);
   margin: 0;
 }
-
 .flash-sales .slick-slide {
   margin: 0 2rem;
 }
@@ -145,7 +135,7 @@ main nav ul li {
   margin: 0 4rem;
 }
 .flash-sales-items .title {
-  font-size: 1rem;
+  font-size: 1.5rem;
 }
 .old-price {
   font-size: 1.2rem;
@@ -159,104 +149,4 @@ main nav ul li {
   font-size: 1.7rem;
   justify-content: center;
   gap: 0 2rem;
-}
-p {
-  margin: 1rem 0;
-}
-
-.product {
-  width: 100%;
-  border-radius: 1.5rem;
-  box-shadow: rgba(0, 0, 0, 0.16) 0px 1px 4px;
-  margin: 0.5rem;
-}
-.product .item img {
-  width: 100%;
-  height: 60%;
-  border-radius: 2rem;
-}
-.product .item {
-  border-radius: 2rem;
-  box-shadow: rgba(0, 0, 0, 0.16) 0px 1px 8px;
-  position: relative;
-}
-.name {
-  text-align: center;
-  font-size: 1.6rem;
-  margin: 0.5rem;
-}
-
-.sales-title {
-  font-size: 1.5rem;
-  font-weight: bold;
-  color: #ffb213;
-  margin: 1rem 0;
-}
-
-.item:hover::before {
-  content: "";
-  top: 0;
-  bottom: 0;
-  right: 0;
-  left: 0;
-  position: absolute;
-  transition: 0.5s;
-  opacity: 0.8;
-  border-radius: 12px;
-  background-color: #fff;
-  filter: brightness(50%);
-}
-.item:hover .btn-container {
-  display: flex;
-}
-.btn-container {
-  display: none;
-  position: absolute;
-  width: 100%;
-
-  justify-content: center;
-
-  top: 50%;
-  transform: translateY(-50%);
-}
-.btn-item {
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  margin: 0.5rem;
-  font-size: 1rem;
-  position: relative;
-  padding: 1rem;
-  font-weight: 700;
-  border-radius: 12px;
-  border: none;
-  outline: none;
-  box-shadow: rgba(100, 100, 111, 0.2) 0px 7px 29px 0px;
-}
-
-.btn-item:active,
-.btn-item:focus {
-  outline: none;
-}
-.btn-item:first-child {
-  background-color: #ffb213;
-  color: white;
-}
-.btn-item:first-child:after {
-  content: "+";
-  display: block;
-  position: absolute;
-  color: white;
-  font-size: 2rem;
-  top: 10;
-  left: 0;
-  transform: translate(200%, -50%);
-}
-@media screen and (max-width: 1024px) {
-  .sales-title {
-    font-size: 1.5rem;
-  }
-  .btn-item {
-    font-size: 1.2rem;
-  }
 }

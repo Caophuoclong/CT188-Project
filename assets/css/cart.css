@@ -1,14 +1,6 @@
-.payment-box {
-  padding: 2rem;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-}
 .box1,
 .infoContact {
-  width: 45%;
   overflow: auto;
-
   margin: 0 1.5rem;
   height: 65rem;
 }
@@ -211,7 +203,7 @@ input[type="number"]::-webkit-outer-spin-button {
 }
 .price {
   margin: 1rem 0;
-  font-size: 1.5rem;
+  font-size: 1.2rem;
   font-weight: 700;
   text-align: right;
 }
