@@ -60,13 +60,11 @@ form_contact.addEventListener('submit', function (event) {
     const content = document.getElementById('content').value;
     if (name.length > 3 && validateEmail(email) && validatePhone(phone)
         && content.length > 10) {
-        alert('Gửi liên hệ thành công!');
+        Toast("Gửi liên hệ thành công!!!", successColor);
         // return true;
         // console.log('ok');
         location.reload();
     } else {
-        alert('Gửi liên hệ thất bại!');
-        event.preventDefault();
-        return false;
+        Toast("Gửi liên hệ thất bại...", errorColor);
     }
 })

@@ -1,30 +1,29 @@
 #form-contact input[type="text"],
 .form-group textarea {
   border-radius: 0.5rem;
-  padding: 1rem;
+  padding: 0.5rem;
   margin-bottom: 1rem;
   box-sizing: border-box;
   outline: 0;
-  transition: all 0.3s;
+  /* transition: all 0.3s; */
+  font-weight: 500;
   border: 0.2rem solid rgb(175, 174, 174);
 }
-#form-contact input[type="submit"]:hover {
+/* #form-contact input[type="submit"]:hover {
   background-color: #ffb213;
 }
 #form-contact input[type="submit"] {
   border-radius: 0.5rem;
   outline: 0;
   border: 0.2rem solid rgb(175, 174, 174);
-}
+} */
 .contact {
   display: flex;
   justify-content: space-around;
 }
 #myForm {
-  border: 0.3rem solid #ffb213;
+  border: 0.5rem solid #ffb213;
   border-radius: 2rem;
-  margin-right: 2rem;
-  margin-bottom: 2rem;
 }
 .form_ct {
   padding: 1rem;
@@ -32,3 +31,27 @@
 .form_ct h1 {
   margin-bottom: 2rem;
 }
+#quickContact {
+  font-size: 1.5rem;
+}
+/* #quick {
+  padding: 2rem 0 1rem 0;
+} */
+#quickContact a {
+  color: rgb(39, 202, 202);
+}
+#quickContact a:hover {
+  color: #ffb213;
+}
+#quickContact i {
+  padding: 0.5rem;
+}
+/* .quick1 {
+  border-radius: 0.5rem solid rgb(175, 174, 174);
+} */
+/* #quick1,
+#quick2 {
+} */
+/* #quickContact {
+  justify-content: space-between;
+} */

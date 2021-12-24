@@ -101,8 +101,10 @@
     <main>
       <header>
         <a href="/"
-          ><img src="https://picsum.photos/70           " alt="" id="logo" />
-          <span>Mobile Store</span>
+          ><img src="./assets/images/logo.jpg" alt="" id="logo" />
+          <span class="primary-color font-weight-bold font-italic"
+            >Mobile World</span
+          >
         </a>
         <form action="/search.html" class="search d-none d-lg-flex">
           <input type="text" name="search_inp" placeholder="Tìm kiếm" />
@@ -124,7 +126,7 @@
             <h1 class="text-center mt-4 mb-4">LIÊN HỆ CHO CHÚNG TÔI</h1>
             <form
               action="#"
-              method="get"
+              method="GET"
               id="form-contact"
               enctype="application/x-www-form-urlencoded"
             >
@@ -181,7 +183,18 @@
                 <span id="errorContent"></span>
               </div>
               <div class="form-group">
-                <input class="form-control" type="submit" value="GỬI LIÊN HỆ" />
+                <input
+                  class="
+                    form-control
+                    btn btn-primary
+                    w-25
+                    d-block
+                    mx-auto
+                    btn-outline-primary
+                  "
+                  type="submit"
+                  value="GỬI LIÊN HỆ"
+                />
               </div>
             </form>
           </div>
@@ -195,6 +208,31 @@
               allowfullscreen=""
               loading="lazy"
             ></iframe>
+          </div>
+        </div>
+      </div>
+      <div id="quick"><h1 class="text-center my-3">Liên hệ nhanh</h1></div>
+      <div class="container" id="quickContact">
+        <div class="row justify-content-around">
+          <div class="col-lg-3 border border-primary rounded">
+            <a href="#"
+              ><i class="fas fa-map-marker-alt"></i>Tôi muốn biết đơn hàng của
+              tôi đã giao tới đâu?
+            </a>
+            <p>
+              Cập nhật trạng thái đơn hàng với công cụ kiểm tra đơn hàng trực
+              tuyến của Mobile Store
+            </p>
+          </div>
+          <div class="col-lg-3 border border-primary rounded my-md-5 my-lg-0">
+            <a href="#"><i class="fas fa-undo"></i>Tôi muốn đổi trả sản phẩm</a>
+            <p>Điền form để thực hiện đổi trả sản phẩm</p>
+          </div>
+          <div class="col-lg-3 border border-primary rounded">
+            <a href=""
+              ><i class="fas fa-trash-restore-alt"></i>Tôi muốn huỷ đơn hàng</a
+            >
+            <p>Điền form để thực hiện huỷ đơn hàng</p>
           </div>
         </div>
       </div>

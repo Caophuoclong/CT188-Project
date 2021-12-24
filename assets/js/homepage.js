@@ -13,7 +13,7 @@ $(document).ready(function () {
 	$(".slide-container").slick({
 		infinite: true,
 		autoplay: true,
-		autoplaySpeed: 2000,
+		autoplaySpeed: 1500,
 		slideToShow: 3,
 		prevArrow: '<button class="slick-prev slick-arrow d-flex justify-content-center btn-outline-light"><i class="material-icons" >arrow_back_ios</i></button>',
 		nextArrow: '<button class="slick-next slick-arrow d-flex justify-content-center btn-outline-light"><i class="material-icons" >arrow_forward_ios</i></button>',

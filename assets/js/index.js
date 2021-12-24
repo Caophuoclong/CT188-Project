@@ -132,7 +132,7 @@ function renderProduct(array, className, n) {
             ${price !== 0 ? `<p class="">${price.toLocaleString("it-IT", { style: "currency", currency: "VND" })}</p>` : `<p class="old-price text-secondary"><del>${oldPrice.toLocaleString("it-IT", { style: "currency", currency: "VND" })}</del></p>`}
             ${item.newPrice.length > 0 ? `<p class="new-price text-danger">${newPrice.toLocaleString("it-IT", { style: "currency", currency: "VND" })}</p>` : ""}
           </div>
-          <div class="sales-title ">Sales 10% when buy more items</div>
+          <div class="sales-title ">Giảm giá 10% khi mua thêm sản phẩm!!!</div>
 		  <div class="btn-container">
 		  <button class="btn-item btn-add-to-cart" id="atc${item.id}" onclick="addToCart(${item.id})">
 		 	<i class="material-icons" >shopping_cart</i> 
@@ -163,7 +163,7 @@ function renderProductByBrand(array, brand, className, n) {
             ${price !== 0 ? `<p class="">${price.toLocaleString("it-IT", { style: "currency", currency: "VND" })}</p>` : `<p class="old-price text-secondary"><del>${oldPrice.toLocaleString("it-IT", { style: "currency", currency: "VND" })}</del></p>`}
             ${item.newPrice.length > 0 ? `<p class="new-price text-danger">${newPrice.toLocaleString("it-IT", { style: "currency", currency: "VND" })}</p>` : ""}
           </div>
-          <div class="sales-title ">Sales 10% when buy more items</div>
+          <div class="sales-title ">Giảm giá 10% khi mua thêm sản phẩm!!!</div>
 		  <div class="btn-container">
 		  <button class="btn-item btn-add-to-cart" id="atc${item.id}" onclick="addToCart(${item.id})">
 		 	<i class="material-icons" >shopping_cart</i> 
