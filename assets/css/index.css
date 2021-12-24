@@ -37,7 +37,7 @@ textarea:focus,
 select:focus {
   outline: none;
 }
-body > nav {
+body nav {
   background-color: #ffb213;
   z-index: 5;
 }
