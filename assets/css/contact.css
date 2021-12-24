@@ -21,7 +21,7 @@
   justify-content: space-around;
 }
 #myForm {
-  border: 0.3rem solid #ffb213;
+  border: 0.5rem solid #ffb213;
   border-radius: 2rem;
   margin-right: 2rem;
   margin-bottom: 2rem;
@@ -32,3 +32,27 @@
 .form_ct h1 {
   margin-bottom: 2rem;
 }
+#quickContact {
+  font-size: 1.5rem;
+}
+#quick {
+  padding: 2rem 0 1rem 0;
+}
+#quickContact a {
+  color: rgb(39, 202, 202);
+}
+#quickContact a:hover {
+  color: #ffb213;
+}
+#quickContact i {
+  padding: 0.5rem;
+}
+/* .quick1 {
+  border-radius: 0.5rem solid rgb(175, 174, 174);
+} */
+/* #quick1,
+#quick2 {
+} */
+/* #quickContact {
+  justify-content: space-between;
+} */
