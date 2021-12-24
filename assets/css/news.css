@@ -162,7 +162,7 @@ body{
     aspect-ratio: 1/1;
     text-align: center;
 }
-.social-box.fb{
+.social-box.fbk{
     background-color: #516eab;
 }
 .social-box.in{
@@ -248,14 +248,20 @@ body{
     line-height: 1.2rem;
 }
 @media screen and (max-width: 576px) {
-    body > nav{
-        display: none;
+    html{
+        min-width: initial;
+    }
+    body{
+        min-width: initial;
     }
     body > main{
         width: 100%;
         padding: 0 1.5rem;
     }
     body > main > header{
+        display: none;
+    }
+    body > footer{
         display: none;
     }
     .post-slider .post-item a{
