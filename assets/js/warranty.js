@@ -1,11 +1,12 @@
 //Check thong tin bao hanh
-function checkValidate() {
-    if (phone.value.length != 10) {
+function checkValidate(event) {
+    event.preventDefault();
+    if (phone.value.length < 10) {
         console.log(phone.value.length)
-        return false;
+        alert("Số điện thoại không hợp lệ!");
     }
     else {
-        return true;
+        this.submit();
     }
 }
 
